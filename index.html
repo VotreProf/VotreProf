@@ -11,15 +11,16 @@
     <script src="js/abonnez.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css"/>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="css/menu.css">
 </head>
 <body>
   
     <div class="header">
       <div class="topnav" id="myTopnav">
-        <a href="#home" class="active">Accueil</a>
-        <a href="#news">Télécharger</a>
-        <a href="#contact">Contact</a>
+        <a href="Produit/boutique.html" class="active">Accueil</a>
+        <a href="Produit/boutique.html">Livre PDF</a>
+        <a href="#contact" style="display: none;">Contact</a>
         <div class="dropdown" style="display: none;">
           <button class="dropbtn">Dropdown
             <i class="fa fa-caret-down"></i>
@@ -30,7 +31,7 @@
             <a href="#">Link 3</a>
           </div>
         </div>
-        <a href="#about">About</a>
+        <a href="about.html" style="display: none;">About</a>
         <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
       </div>
         <div class="container-header">
@@ -252,6 +253,18 @@
 		}
 
 	}
+    </script>
+       <script>
+        /* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
+function myFunction() {
+  var x = document.getElementById("myTopnav");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
+}
+
     </script>
 </body>
 </html>

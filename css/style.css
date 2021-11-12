@@ -1,381 +1,238 @@
-* {
-    margin: 0;
-    padding: 0;
-    outline: none;
-    box-sizing: border-box;
-    list-style: none;
-    text-decoration: none;
-  }
-  
-  html {
-    font-size: 62.5%;
-  }
-  
-  .header {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    background-color: rgb(0, 97, 207);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: all 1s;
-    z-index: 300;
-    
-  }
-  .h{
-    border: 1px solid red;
-    background: rgba(3, 48, 172, 0.541);
-  }
-  
-  .display .header {
-    opacity: 0;
-    visibility: hidden;
-  }
-  .header .container-header{
-      display: flex;
-      background: white;
-      height: 80%;
-      margin: 30px;
-      width: 80%;
-      padding: 20px;
-  }
-  .container-header div{
-      width: 50%;
-      margin: 5px;
-  }
-  .container-header .header-img{
-      background-image: url('../images/back2.jpg');
-      background-size: cover;
-      align-items: center;
-  }
-  .container-header div img{
-      width: 100%;
-      height: 100%;
-  }
-  
-  /*formulaire news letter*/
-
-  .form{
-    width: 100%;
-    background: white;
-    padding: 10px;
-    margin: auto;
-    position: relative;
-    left: 23%;
-    top: 10%;  
-    border: 3px solid #f1f1f1;
-    z-index: 9;
-  }
-  .form .form-header{
-    background: blue;
-    width: 100%;
-    margin: auto;
-    padding: 5px;
-    color: white;
-  }
-  .form .form-header h1{
-    font-size: 28px;
-    text-align: center;
-  }
-  .form .form-header h2{
-    font-size: 20px;
-    text-align: center;
-  }
-  /* Full-width input fields */
-.form input[type=email], .form input[type=number], .form input[type=text], select {
-  width: 100%;
-  padding: 10px;
-  border: none;
-  background: #868686;
-  border-bottom: 1px red solid;
+body{
+  font: 15px/1.5 Arial, Helvetica,sans-serif;
+  padding:0;
+  margin:0;
+  background-color:#f4f4f4;
 }
-.form .form-groupe{
-  width: 280px;
-  margin: auto;
-  margin-bottom: 10px;
-}
-.form .form-groupe .code{
-  width: 280px;
-  margin: auto;
-}
-.form .form-groupe .code select{
-  margin-left: 5px;
-}
-.form .form-groupe label{
-  margin-top: 10px;
-}
-.form .form-groupe span{
-  color: blue;
-}
-.form .form-groupe label, #emailMsg, #passMsg{
-  color: blue;
-  font-size: 18px;
-  margin-top: 10px;
+*{
+  box-sizing: border-box;
 }
 
-/* When the inputs get focus, do something */
-.form input[type=email]:focus, .form input[type=password]:focus {
-  background-color: #ddd;
-  outline: none;
+/* Global */
+.container{
+  width:80%;
+  margin:auto;
+  overflow:hidden;
 }
 
-/* Set a style for the submit/login button */
-.form .btn {
-  background-color: #04AA6D;
-  color: white;
-  padding: 16px 20px;
-  border: none;
-  cursor: pointer;
-  width: 100%;
+ul{
+  margin:0;
+  padding:0;
+}
+
+.button_1{
+  height:38px;
+  background:#e8491d;
+  border:0;
+  padding-left: 20px;
+  padding-right:20px;
+  color:#ffffff;
+}
+
+.dark{
+  padding:15px;
+  background:#35424a;
+  color:#ffffff;
+  margin-top:10px;
   margin-bottom:10px;
-  opacity: 0.8;
 }
 
+/* Header **/
+header{
+  background:#35424a;
+  color:#ffffff;
+  padding-top:30px;
+  min-height:70px;
+  border-bottom:#e8491d 3px solid;
+}
 
-  .header p{
-      font-size: 20px;
-      text-align: justify;
-      color: white;
-      margin: 5px;
-  }
+header a{
+  color:#ffffff;
+  text-decoration:none;
+  text-transform: uppercase;
+  font-size:16px;
+}
 
-.header-contenue .h{
+header li{
+  float:left;
+  display:inline;
+  padding: 0 20px 0 20px;
+}
+
+header #branding{
+  float:left;
+}
+
+header #branding h1{
+  margin:0;
+}
+
+header nav{
+  float:right;
+  margin-top:10px;
+}
+
+header .highlight, header .current a{
+  color:#e8491d;
+  font-weight:bold;
+}
+
+header a:hover{
+  color:#cccccc;
+  font-weight:bold;
+}
+
+/* Showcase */
+#showcase{
+  min-height:400px;
+  background:url('../img/showcase.jpg') no-repeat 0 -400px;
+  text-align:center;
+  color:#ffffff;
+}
+
+#showcase h1{
+  margin-top:100px;
+  font-size:55px;
+  margin-bottom:10px;
+}
+
+#showcase p{
+  font-size:20px;
+}
+
+/* Newsletter */
+#newsletter{
   width: 100%;
+  background: black;
 }
-  .header-contenue h1{
-      font-size: 36px;
-      font-family: arial black;
-      font-weight: bold;
-      text-align: center;
-      color: blue;
-  }
-  .header-contenue h1 span{
-      color: orangered;
-  }
-  
-  .header-contenue h2{
-    font-size: 28px;
-    font-family: arial black;
-    font-weight: bold;
-    text-align: center;
-    color: white;
+#newsletter form{
+  width: 70%;
+  margin: auto;
 }
-.header-contenue h3{
-    font-size: 20px;
-    font-family: arial black;
-    font-weight: bold;
-    text-align: center;
-    color: white;
+#newsletter input[type=email]{
+  padding: 10px;
+}
+#newsletter select{
+  padding: 10px;
+  width: 50px;
+}
+/* Boxes */
+#boxes{
+  margin-top:20px;
 }
 
-.card{
-    display: flex;
-    width: 95%;
-    border: 0px;
-    margin: 10px auto;
+#boxes .box{
+  float:left;
+  text-align: center;
+  width:30%;
+  padding:10px;
 }
-.card div{
-    border: 0px;
+
+#boxes .box img{
+  width:90px;
 }
-.card h1{
-    font-size: 18px;
+
+/* Sidebar */
+aside#sidebar{
+  float:right;
+  width:30%;
+  margin-top:10px;
 }
-.card p{
-    font-size: 18px;
-    color: black;
+
+aside#sidebar .quote input, aside#sidebar .quote textarea{
+  width:90%;
+  padding:5px;
 }
-.card .card-img{
-    width: 50%;
+
+/* Main-col */
+article#main-col{
+  float:left;
+  width:65%;
 }
-.card .card-img .mob{
-  display: none;
+
+/* Services */
+ul#services li{
+  list-style: none;
+  padding:20px;
+  border: #cccccc solid 1px;
+  margin-bottom:5px;
+  background:#e6e6e6;
 }
-.card .text{
+
+
+main{
+  border: 1px solid red;
+  width: 30px;
+}
+
+footer{
+  padding:20px;
+  margin-top:20px;
+  color:#ffffff;
+  background-color:#e8491d;
+  text-align: center;
+}
+
+/* Media Queries */
+@media(max-width: 768px){
+  header #branding,
+  header nav,
+  header nav li,
+  #newsletter h1,
+  #newsletter form,
+  #boxes .box,
+  article#main-col,
+  aside#sidebar{
+    float:none;
+    text-align: justify;
+    width:100%;
+    padding: 0px;
+    margin: 0px;
+  }
+  #boxes .container{
     width: 100%;
-}
-.card button{
-    background: blue;
-    border: 0px;
-    padding: 10px;
-    border-radius: 10px;
-    color: white;
-}
-.card button:hover{
-    background: orange;
-    border-radius: 5px;
-}
+  }
+  #boxes .box{
+    float:none;
+    text-align: center;
+    width:100%;
+    padding:1px;
+  }
+  body{
+    padding: 0px;
+    box-sizing: border-box;
+  }
+  header{
+    padding-bottom:20px;
+  }
 
-/* Share Buttons */
+  #showcase h1{
+    margin-top:40px;
+    font-size: 6vw;
 
-.share-btn-container {
-    background: #fff;
+  }
+  #showcase h2{
+    font-size: 5vw;
+
+  }
+  #showcase p{
+    font-size: 4vw;
+
+  }
+  #newsletter select{
     width: 100%;
-    align-items: center;
-    display: flex;
-    padding: 4px;
-    border: 0px;
-    margin: auto;
-   
   }
-  
-  .share-btn-container a i {
-    font-size: 32px;
+  #newsletter h1{
+    font-size: 5.1vw;
   }
-  
-  .share-btn-container a {
-    margin: 12px;
-    transition: 500ms;
+
+  #newsletter button, .quote button{
+    display:block;
+    width:100%;
   }
-  
-  .share-btn-container a:hover {
-    transform: scale(1.2);
+
+  #newsletter form input[type="email"], .quote input, .quote textarea{
+    width:100%;
+    margin-bottom:5px;
   }
-  
-  .share-btn-container .fa-facebook {
-    color: #3b5998;
-  }
-  
-  .share-btn-container .fa-twitter {
-    color: #1da1f2;
-  }
-  
-  .share-btn-container .fa-linkedin {
-    color: #0077b5;
-  }
-  
-  .share-btn-container .fa-pinterest {
-    color: #bd081c;
-  }
-  
-  .share-btn-container .fa-whatsapp {
-    color: #25d366;
-  }
-  
-  /* Media Queries */
-  
-  @media (max-width: 550px) {
-    .content {
-      padding: 8px 32px;
-    }
-  
-    .share-btn-container {
-      transform: unset;
-      top: unset;
-      left: 0;
-      bottom: 0;
-      width: 100%;
-      overflow: hidden;
-      flex-direction: row;
-      box-shadow: 4px 0 8px rgba(0, 0, 0, 0.3);
-      padding: 1px 0;
-      justify-content: center;
-    }
-  
-    .share-btn-container a {
-      margin: 0 32px;
-    }
-  }
-  
-  @media screen and (max-width:1000px) {
-    * {
-        margin: 0;
-        padding: 0;
-        outline: none;
-        box-sizing: border-box;
-        list-style: none;
-        text-decoration: none;
-      }
-      body{
-        margin: 0;
-        padding: 0;
-        outline: none;
-        box-sizing: border-box;
-        list-style: none;
-        text-decoration: none;
-      }
-      
-      html {
-        font-size: 62.5%;
-      } 
-    
-    .header{
-      position: relative;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-color: rgb(0, 97, 207);
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      transition: all 1s;
-      z-index: 0;
-      margin-top: 51px;
-      }
-      .header .container-header{
-        flex-wrap: wrap;
-        background: white;
-        height: 100%;
-        margin: 0px;
-        width: 100%;
-        padding: 0px;
-    }
-    .container-header div{
-        width: 100%;
-        height: 100%;
-        margin: 0px;
-    }
-    .header-img{
-        display: none;
-    }
-    .card{
-        flex-wrap: wrap;
-        width: 99%;
-    border: 0px;
-    margin: 10px auto;
-    }
-    .card .text h1{
-      font-size: 4.5vw;
-    }
-    .card .card-img{
-        width: 100%;
-    }
-    .card .card-img .ordi{
-      display: none;
-    }
-    .card .card-img .mob{
-      display: block;
-    }
-    .header-contenue .h h1{
-      font-size: 6vw;
-      color: white;
-    }
-    .header-contenue .h h2{
-      font-size: 4vw;
-      color: white;
-    }
-    .header-contenue .h h3{
-      font-size: 3.7vw;
-      color: white;
-    }
-    .header-contenue .h{
-      border: 1px solid red;
-      background: rgb(1, 1, 78);
-      color: white;
-    }
-    .header-contenue h1{
-      font-size: 6vw;
-    }
-    .header-contenue p{
-      font-size: 4.5vw;
-    }
-    .header-contenue button{
-      font-size: 4.5vw;
-      width: 100%;
-      margin: auto;
-      border-radius: 0px;
-    }
-  }
+}

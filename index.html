@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="js/abonnez.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css"/>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/menu.css">
+</head>
+<body>
+  
+    <div class="header">
+      <div class="topnav" id="myTopnav">
+        <a href="#home" class="active">Accueil</a>
+        <a href="#news">Télécharger</a>
+        <a href="#contact">Contact</a>
+        <div class="dropdown" style="display: none;">
+          <button class="dropbtn">Dropdown
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-content">
+            <a href="#">Link 1</a>
+            <a href="#">Link 2</a>
+            <a href="#">Link 3</a>
+          </div>
+        </div>
+        <a href="#about">About</a>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
+      </div>
+        <div class="container-header">
+            <div class="header-img">
+              <div class="form">
+                  <div class="form-header">
+                    <h1>Inscrivez-vous</h1>
+                    <h2>Recevez tous nos notifications par mail gratuitement</h2>
+                  </div>
+                  <div class="form-groupe">
+                    <label>Votre Nom et prénom</label>
+                    <div class="code" style="display: flex;">
+                      <input type="text" id="lname" style="margin-right: 5px;"  placeholder="Votre Nom">
+                      <input type="text" id="fname"  placeholder="Votre Prénom">
+                      
+                    </div>
+                  </div>
+                    <div class="form-groupe">
+                      <label>Enter email:</label>
+                      <input type="email" id="email" placeholder="Entrer votre email" autocomplete="off" name="">
+                    </div>
+                    <div class="form-groupe">
+                      <label>Ville et Code Area :</label>
+                      <div class="code" style="display: flex;">
+                        <input type="text" id="ville" placeholder="Votre Ville Residence">
+                        <select type="number" name="pays" id="code">
+                          <option></option>
+                          <option value="+229">Benin (+229)</option>
+                          <option value="+257">Burundi (+257)</option>
+                          <option value="+226">Burkina Faso (+226)</option>
+                          <option value="+237">Cameroon (+237)</option>
+                          <option value="+1">Canada (+1)</option>
+                          <option value="+238">Cape Verde (+238)</option>
+                          <option value="+236">Central African Republic (+236)</option>
+                          <option value="+242">Congo (+242)</option>
+                          <option value="+242">Congo, the Democratic Republic of the (+242)</option>
+                          <option value="+225">Cote D'Ivoire (+225)</option>
+                          <option value="+1809">Dominican Republic (+1809)</option>
+                          <option value="+298">Faroe Islands (+298)</option>
+                          <option value="+594">French Guiana (+594)</option>
+                          <option value="+509">Haiti (+509)</option>
+                          <option value="+352">Luxembourg (+352)</option>
+                          <option value="+853">Macao (+853)</option>
+                          <option value="+389">Macedonia, the Former Yugoslav Republic of (+389)</option>
+                          <option value="+261">Madagascar (+261)</option>
+                          <option value="+223">Mali (+223)</option>
+                          <option value="+377">Monaco (+377)</option>
+                          <option value="+227">Niger (+227)</option>
+                          <option value="+234">Nigeria (+234)</option>
+                          <option value="+262">Reunion (+262)</option>
+                          <option value="+250">Rwanda (+250)</option>
+                          <option value="+268">Swaziland (+268)</option>
+                          <option value="+228">Togo (+228)</option>
+                          <option value="+690">Tokelau (+690)</option>
+                          <option value="+676">Tonga (+676)</option>
+                          <option value="+260">Zambia (+260)</option>
+                          <option value="+263">Zimbabwe (+263)</option>
+                        </select>
+                        
+                      </div>
+                    </div>
+                    <div class="form-groupe">
+                      <label>Enter password:</label>
+                      <input type="number"  id="number" placeholder="Entrer votre numéro" autocomplete="off" name="">
+                    </div>
+              
+                    <div class="form-groupe">
+                      <button class="btn" id="btn" onclick="envoyer()">S'inscrire</button>
+                    </div>
+              </div>
+            </div>
+            <div class="header-contenue">
+                <div class="h">
+                  <h1>Bienvenue sur <span>VotreProf</span></h1>
+                <h2>Cours informatique et conseil gartuit</h2>
+                <h3>Initiez-vous en informatique avec <span>VotreProf</span></h3>
+                </div> <hr>
+                <section class="card">
+                    <div class="card-img">
+                      <img src="images/windows.png" alt="" class="ordi">
+                      <img src="images/windowb.png" alt="" class="mob">
+                    </div>
+                    <div class="text" >
+                        <h1>Fromation informatique bureautique</h1>
+                        <p>
+                            Des cours bureutique sont disponible pour tous les debutant en informatique,
+                            on vous apprendre a bien debutant en windows, word, powerpoint exel etc...
+                        </p>
+                        <p><em>Il existe aussi des document a telecharger sur  notre blog ou l'application ftech plus</em></p>
+                    </div>
+                </section>
+
+                <section class="card">
+                    <div class="card-img">
+                      <img src="images/html.png" alt="" class="ordi">
+                      <img src="images/htmlcss.png" alt="" class="mob">
+                    </div>
+                    <div class="text" >
+                        <h1>Programmation web <span>(HTM & CSS)</span></h1>
+                        <p>
+                           Apprendre a creer un site web eb html et css, nous vous proposon une formation sur la Programmation web
+                           c'est une formtion gratuit et fait uniquement pour les debutant
+                        </p>
+                        <button>Je veux apprendre ce cours</button>
+                    </div>
+                </section>
+               <center> <div class="share-btn-container">
+                <a href="#" class="facebook-btn">
+                  <i class="fab fa-facebook"></i>
+                </a>
+          
+                <a href="#" class="twitter-btn">
+                  <i class="fab fa-twitter"></i>
+                </a>
+          
+                <a href="#" class="pinterest-btn">
+                  <i class="fab fa-pinterest"></i>
+                </a>
+          
+                <a href="#" class="linkedin-btn">
+                  <i class="fab fa-linkedin"></i>
+                </a>
+          
+                <a href="#" class="whatsapp-btn">
+                  <i class="fab fa-whatsapp"></i>
+                </a>
+              </div></center>
+            </div>
+        </div>
+        
+    </div>
+    <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-database.js"></script> 
+<script>
+   var firebaseConfig = {
+            apiKey: "AIzaSyA7xvnxxWkMhBonpj5AiZ5Hkkdv-jZAqDk",
+            authDomain: "maliste-d4c03.firebaseapp.com",
+            databaseURL: "https://maliste-d4c03.firebaseio.com",
+            projectId: "maliste-d4c03",
+            storageBucket: "maliste-d4c03.appspot.com",
+            messagingSenderId: "552655235785",
+            appId: "1:552655235785:web:a4b660caf5882e4be57b18",
+            measurementId: "G-V6R9FPCSG1"
+
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+      </script>
+    <script>
+      $(document).ready(function(){
+		// set initially button state hidden
+		$("#btn").hide();
+		// use keyup event on email field
+		$("#email").keyup(function(){
+			if(validateEmail()){
+				// if the email is validated
+				// set input email border green
+				$("#email").css("border","2px solid green");
+				// and set label 
+				$("#emailMsg").html("<p class='text-success'>Validated</p>");
+			}else{
+				// if the email is not validated
+				// set border red
+				$("#email").css("border","2px solid red");
+				$("#emailMsg").html("<p class='text-danger'>Un-validated</p>");
+			}
+			buttonState();
+		});
+		// use keyup event on password
+		$("#number").keyup(function(){
+			// check
+			if(validatePassword()){
+				// set input password border green
+				$("#number").css("border","2px solid green");
+				//set passMsg 
+				$("#passMsg").html("<p class='text-success'>Password validated</p>");
+			}else{
+					// set input password border red
+				$("#number").css("border","2px solid red");
+				//set passMsg 
+				$("#passMsg").html("<p class='text-danger'>Password not valid</p>");
+			}
+			buttonState();
+		});
+	});
+
+	function buttonState(){
+		if(validateEmail() && validatePassword()){
+			// if the both email and password are validate
+			// then button should show visible
+			$("#btn").show();
+		}else{
+			// if both email and pasword are not validated
+			// button state should hidden
+			$("#btn").hide();
+		}
+	}
+	function validateEmail(){
+		// get value of input email
+		var email=$("#email").val();
+		// use reular expression
+		 var reg = /^\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$/
+		 if(reg.test(email)){
+		 	return true;
+		 }else{
+		 	return false;
+		 }
+
+	}
+	function validatePassword(){
+		//get input password value
+		var pass=$("#number").val();
+		// check it s length
+		if(pass.length > 7){
+			return true;
+		}else{
+			return false;
+		}
+
+	}
+    </script>
+</body>
+</html>

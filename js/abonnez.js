@@ -1,34 +1,33 @@
 
 
-   var codeV, villeV, emailV, numberV, nameV, pnameV;
+   var codeV, emailV, numberV, nameV;
 
 function envoyer() {
-    nameV = document.getElementById('lname').value;
-     pnameV = document.getElementById('fname').value;
+    nameV = document.getElementById('name').value;
      codeV = document.getElementById('code').value;
      emailV = document.getElementById('email').value;
      numberV = document.getElementById('number').value;
-     villeV = document.getElementById('ville').value;
    
   if(nameV == ""){
-    $("#lname").css("border","2px solid red");
-  }else if(pnameV == ""){
-    $("#fname").css("border","2px solid red");
+    alert('nom');
+    
+  }else if(emailV == ""){
+    alert('email');
   }else if(codeV == ""){
-    $("#code").css("border","2px solid red");
- }else if(villeV == ""){
-    $("#ville").css("border","2px solid red");
+    alert('code');
+ }else if(numberV == ""){
+  alert('number');
   }else{
-    firebase.database().ref('VotreProf/' + numberV).set({
-        ANAME: nameV + pnameV,
+    firebase.database().ref('VotreProf/' + nameV).set({
+        ANAME: nameV,
         Email: emailV,
         NUMBER: (codeV) + numberV,
     });
-    document.getElementById('lname').value = '';
-    document.getElementById('fname').value = '';
-    document.getElementById('ville').value = '';
+    document.getElementById('name').value = '';
     document.getElementById('email').value = '';
     document.getElementById('number').value = '';
     
   }
  }
+
+ 

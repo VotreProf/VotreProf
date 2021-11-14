@@ -98,11 +98,16 @@
   margin-bottom: 10px;
 }
 .form .form-groupe .code{
-  width: 280px;
+  width: 100%;
   margin: auto;
 }
+.form .form-groupe .code div{
+  width: 100%;
+  margin: 4px;
+}
 .form .form-groupe .code select{
-  margin-left: 5px;
+  margin-left: 0px;
+  width: 100%;
 }
 .form .form-groupe label{
   margin-top: 10px;

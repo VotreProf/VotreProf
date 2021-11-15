@@ -1,0 +1,140 @@
+header{
+    height: 300px;
+    background-image: url('https://png.pngtree.com/thumb_back/fw800/background/20190221/ourmid/pngtree-gradient-technology-computer-banner-image_15042.jpg');
+    background-size: cover;
+    width: 80%;
+    margin: auto;
+}
+img{
+    width: 100%;
+}
+button{
+    border: 0px;
+    background: orangered;
+    color: white;
+    font-size: 18px;
+    padding: 9px;
+    cursor: pointer;
+}
+button:hover{
+    background: red;
+    border-radius: 10px;
+}
+.content{
+    width: 80%;
+    margin: auto;
+    display: flex;
+}
+main{
+    width: 70%;
+    padding: 10px;
+}
+main p{
+    font-size: 16px;
+    text-align: justify;
+}
+aside{
+    width: 30%;
+    background: blue;
+    height: 100%;
+}
+
+.partage{
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+}
+a{
+    text-decoration: none;
+}
+.twitter-btn{
+    width: 100%;
+    align-items: center;
+    margin: 0px;
+}
+.twitter-btn .fa-twitter{
+   color: rgb(3, 81, 182);
+   padding: 6px 10px 6px 10px;
+   font-size: 30px;
+   margin: 5px;
+   background: white;
+
+}
+.facebook-btn{
+    width: 100%;
+    padding: 0px 10px 6px 10px;
+    align-items: center;
+    margin: 5px;
+}
+.facebook-btn .fa-facebook-f{
+   color: rgb(3, 36, 182);
+   padding: 6px 10px 6px 10px;
+   font-size: 30px;
+   margin: 0px;
+   background: white;
+}
+
+.whatsapp-btn{
+    width: 100%;
+    padding: 1px;
+    align-items: center;
+    margin: 5px;
+}
+.whatsapp-btn .fa-whatsapp{
+   color: rgb(0, 95, 21);
+   padding: 6px 10px 6px 10px;
+   font-size: 30px;
+   margin: 0px;
+   background: white;
+}
+
+.youtube{
+    width: 100%;
+    padding: 0px;
+    align-items: center;
+    margin: 5px;
+}
+.youtube .fa-youtube{
+   color: rgb(255, 1, 1);
+   padding: 6px 10px 6px 10px;
+   font-size: 30px;
+   margin: 0px;
+   background: white;
+}
+@media screen and (max-width: 800px) {
+    body{
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+        background: white;
+    }
+    header{
+        width: 100%;
+    }
+    .container{
+        width: 100%;
+        border: 1px solid red;
+    }
+    .content, main{
+        flex-wrap: wrap;
+        width: 100%;
+    }
+    main{
+        margin-bottom: 60px;
+    }
+    aside{
+        display: none;
+    }
+    .partage{
+        background: blue;
+        height: 50px;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        margin: 0px;
+        padding: 0px;
+    }
+
+}

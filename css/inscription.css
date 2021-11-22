@@ -1,0 +1,298 @@
+body{
+    background-color: #FFF;
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+  }
+  *{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+  }
+  img{
+    width: 100%;
+  }
+  video{
+    width: 100%;
+  }
+  #receive{
+    display: none;
+    margin-bottom: 10px;
+  }
+  button, #receive{
+    border: 0px;
+    padding: 10px;
+    background: blue;
+    color: #FFF;
+    margin: 10px;
+    cursor: pointer;
+  }
+  button:hover{
+    background: red;
+    font-size: 20px;
+    border-radius: 15px;
+    
+  }
+
+  main{
+      width: 100%;
+      padding: 20px;
+  }
+  .home{
+      width: 70%;
+      margin: auto;
+      padding: 5px;
+      display: flex;
+  }
+  p{
+      font-size: 16px;
+  }
+
+  header{
+      width: 70%;
+      margin: auto;
+      height: 30vh;
+      background-image: url('../images/back2.jpg');
+      background-size: cover;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #FFF;
+  }
+  header h1{
+      font-size: 36px;
+      text-align: center;
+  }
+
+  header h2{
+    font-size: 24px;
+    text-align: center;
+}
+
+.detail {
+    width: 100%;
+    height: 100%;
+    box-shadow: 0px 0px 3px 1px black;
+}
+.detail h3{
+    font-size:  23px ;
+    text-align: center;
+}
+.detail strong{
+    font-size: 20px;
+    color: blue;
+    margin: 10px;
+}
+
+.detail h2{
+    font-size: 26px;
+    text-align: center;
+    margin: 10px;
+    color: orange;
+}
+.detail h3{
+    width: max-content;
+    font-size: 20px;
+    text-align: left;
+    margin: 10px;
+    color: white;
+    padding: 5px;
+    background: turquoise;
+}
+.detail h4{
+    font-size: 26px;
+    text-align: center;
+    margin: 10px;
+    color: red;
+}
+.detail ul{
+    margin-left: 10px;
+    border: 1px solid;
+    width: max-content;
+    list-style: none;
+    
+
+}
+.detail ul li{
+    margin: 0px;
+}
+.head{
+    width: 100%;
+    background: blue;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+.head p{
+    font-size: 20px;
+    text-align: center;
+}
+
+.head h4{
+    font-size: 20px;
+    text-align: center;
+}
+#groupe{
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.form{
+    margin: auto;
+    border: 1px solid blue;
+    margin-left: 10px;
+}
+.groupe{
+    width: 98.50%;
+    background: gray;
+    margin: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.groupe section{
+    border: 1px solid red;
+    width: 100%;
+}
+select, input[type="number"], input[type="email"], input[type="text"]{
+    outline: none;
+    border: none;
+    border-bottom: blue 1px solid;
+    padding: 10px;
+    margin-top: 5px;
+    width: 98%;
+}
+
+#popup{
+    display: none;
+}
+
+
+ /* bouton resesosyo isi*/
+ .middle{
+  width: 100%;
+  text-align: center;
+}
+.middle h1{
+  font-size: 36px;
+}
+.btn{
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  background: #f1f1f1;
+  margin: 10px;
+  border-radius: 30%;
+  box-shadow: 0 5px 15px -5px #00000070;
+  color: #3498db;
+  overflow: hidden;
+  position: relative;
+}
+.btn i{
+  line-height: 40px;
+  font-size: 20px;
+  transition: 0.2s linear;
+}
+.btn:hover i{
+  transform: scale(1.3);
+  color: #f1f1f1;
+}
+.btn::before{
+  content: "";
+  position: absolute;
+  width: 120%;
+  height: 120%;
+  background: #3498db;
+  transform: rotate(45deg);
+  left: -110%;
+  top: 90%;
+}
+.btn:hover::before{
+  animation: aaa 0.7s 1;
+  top: -10%;
+  left: -10%;
+}
+  footer{
+    width: 70%;
+    height: 150px;
+    margin: auto;
+      background: black;
+      padding: 10px;
+  }
+  footer .visite{
+    width: 400px;
+  }
+
+  @media screen and (max-width: 800px){
+    body{
+    background-color: #FFF;
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+  }
+  *{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+  }
+  main{
+    width: 100%;
+    padding: 0px;
+}
+header{
+  width: 100%;
+}
+  .home{
+    display: block;
+    flex-wrap: wrap;
+    width: 100%;
+    padding: 0px;
+    margin: 1px;
+    overflow: hidden;
+  }
+  ul{
+    width: 100%;
+    display: none;
+  }
+  .detail{
+    width: 99%;
+    margin: 0px;
+  }
+  .detail button, #form .submit{
+    width: 98%;
+    margin: 0px;
+    margin-bottom: 10px;
+    padding: 10px;
+    background: blue;
+    border: none;
+    color: white;
+    font-size: 18px;
+  }
+  #form{
+    display: none;
+  }
+  .groupe{
+    flex-wrap: wrap;
+  }
+  .form{
+    width: 100%;
+    margin: 0px;
+    
+  }
+  #receive{
+    display: block;
+  }
+  footer{
+    overflow: hidden;
+    width: 100%;
+  }
+  footer .visite{
+    width: 100%;
+  }
+  
+  }

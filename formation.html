@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="css/html.css">
+</head>
+<body>
+    <main >
+        <div class="form" id="form">
+                <form method="post" autocomplete="off" name="google-sheet">
+                    <h1 id="h1">Remplir le formulaire</h1>
+                    <p>Recevez votre certificat gartuit</p>
+                    <hr>
+                    <div class="field">
+                        <i class="material-icons" style="color: blue;">person</i>
+                        <input type="text" name="name" id="name" placeholder="Votre nom complet">
+                    </div>
+    
+                    <div class="field">
+                        <i class="material-icons" style="color: blue;">mail</i>
+                        <input type="email" name="email" id="email" placeholder="Votre Email">
+                    </div>
+    
+                    <div class="field">
+                        <i class="material-icons" style="color: blue;">phone</i>
+                        <input type="number" name="number" id="number" placeholder="Votre Numero de connection">
+                    </div>
+    
+                    <div class="field">
+                        <i class="material-icons" style="color: blue;">info</i>
+                        <select name="infos" id="infos">
+                            <option value="Je suis débutant en html et css">Je suis débutant en html et css</option>
+                            <option value="Je veux m'initier en informatique">Je veux m'initier en informatique</option>
+                            <option value="Je ne suis pas un débutant">Je ne suis pas un débutant</option>
+                        </select>
+                    </div>
+    
+                    <div class="field">
+                        <i class="material-icons" style="color: blue;">computer</i>
+                        <select name="choixcours" id="choixcours">
+                            <option value="Formation html et css">Formation html et css</option>
+                            <option value="Informatique Bureautique">Informatique Bureautique</option>
+                            <option value="Formation Google Drive">Formation Google Drive</option>
+                        </select>
+                    </div>
+                    <button id="reserve" onclick="send()">Je reserve ma place</button>
+                </form>
+        </div>
+        <div id="message">
+            <section>
+                <div id="recu">
+                    <h1>Vous avez incrit avec succès <br><strong>Merci pour votre participation</strong></h1>
+                    <img src="images/logo.png" alt="">
+                    <p>
+                        Vous receverez un message sur votre mail pour vous avertir
+                        le jour de la formation
+                    </p>
+                    <br>
+                    <a href="index.html" ><p class="pbtn">Fermer cette page</p></a>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <script>
+        document.getElementById("message").style.display = 'none';
+        document.getElementById("form").style.display = 'block';
+       
+    </script>
+     <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycby33179uPOqjdICPq_ukGIRtw-PwEEdmB2lLrUtyQCNk2UjaTWRr2ZCoWoGPAATbOPH/exec'
+        const form = document.forms['google-sheet']
+      
+        form.addEventListener('submit', e => {
+          e.preventDefault()
+          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => document.getElementById("form").style.display = 'none' ,document.getElementById("message").style.display = 'block' )
+            .catch(error => console.error('Error!', error.message))
+        })
+      </script>
+</body>
+</html>

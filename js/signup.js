@@ -40,7 +40,7 @@ function send() {
     firebase.database().ref('Etudian International/' + nameV).set({
       ANAME: nameV + fnameV,
       Email: emailV,
-      NUMBER: (codeV) + numberV,
+      NUMBER: numberV,
       DATE: dateV,
       REFERENCE: refV,
       SEXE: sexeV,

@@ -1,85 +1,205 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
+<!-- Created By CodingLab - www.codinglabweb.com -->
+<html lang="en" dir="ltr">
+  <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <link rel="stylesheet" href="css/html.css">
-</head>
+    <!---<title> Responsive Registration Form | CodingLab </title>--->
+    <script src="js/signup.js"></script>
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
+     <link rel="stylesheet" href="css/formation.css">
+   </head>
 <body>
-    <main >
-        <div class="form" id="form">
-                <form method="post" autocomplete="off" name="google-sheet">
-                    <h1 id="h1">Remplir le formulaire</h1>
-                    <p>Recevez votre certificat gartuit</p>
-                    <hr>
-                    <div class="field">
-                        <i class="material-icons" style="color: blue;">person</i>
-                        <input type="text" name="name" id="name" placeholder="Votre nom complet">
-                    </div>
-    
-                    <div class="field">
-                        <i class="material-icons" style="color: blue;">mail</i>
-                        <input type="email" name="email" id="email" placeholder="Votre Email">
-                    </div>
-    
-                    <div class="field">
-                        <i class="material-icons" style="color: blue;">phone</i>
-                        <input type="number" name="number" id="number" placeholder="Votre Numero de connection">
-                    </div>
-    
-                    <div class="field">
-                        <i class="material-icons" style="color: blue;">info</i>
-                        <select name="infos" id="infos">
-                            <option value="Je suis débutant en html et css">Je suis débutant en html et css</option>
-                            <option value="Je veux m'initier en informatique">Je veux m'initier en informatique</option>
-                            <option value="Je ne suis pas un débutant">Je ne suis pas un débutant</option>
-                        </select>
-                    </div>
-    
-                    <div class="field">
-                        <i class="material-icons" style="color: blue;">computer</i>
-                        <select name="choixcours" id="choixcours">
-                            <option value="Formation html et css">Formation html et css</option>
-                            <option value="Informatique Bureautique">Informatique Bureautique</option>
-                            <option value="Formation Google Drive">Formation Google Drive</option>
-                        </select>
-                    </div>
-                    <button id="reserve" onclick="send()">Je reserve ma place</button>
-                </form>
+  <div class="container">
+    <div class="title">Formation sur la programmation web en html et css</div>
+    <div id="message" onclick="ferme()">
+      <div>
+        <div class="close">
+          <button id="c" onclick="fermer()">X</button>
+          <h1>Votre<span>Prof</span> Formation</h1>
         </div>
-        <div id="message">
-            <section>
-                <div id="recu">
-                    <h1>Vous avez incrit avec succès <br><strong>Merci pour votre participation</strong></h1>
-                    <img src="images/logo.png" alt="">
-                    <p>
-                        Vous receverez un message sur votre mail pour vous avertir
-                        le jour de la formation
-                    </p>
-                    <br>
-                    <a href="index.html" ><p class="pbtn">Fermer cette page</p></a>
-                </div>
-            </section>
+       <center>
+        <h1>Merci pour votre inscripiton</h1><hr>
+        <i class="material-icons">mark_email_read</i>
+        <p>
+          Téchérger le plan de la formation en pdf,
+        </p>
+        <a href="cours/plan du cours html.pdf" download="plan du cours html.pdf"><button>Télécharger le plan</button></a>
+       </center>
+      </div>
+    </div>
+    <div class="content">
+      <form action="#">
+        <div id="not">
+          <i class="material-icons">lock</i>
+          <p id="msg"></p>
+          <button id="cd" onclick="not()">Fermer</button>
         </div>
-    </main>
+        <div class="user-details">
+          <div class="input-box">
+            <span class="details">Votre Nom</span>
+            <input type="text" id="name" placeholder="Entrer votre nom">
+          </div>
+          <div class="input-box">
+            <span class="details">Votre Prenom</span>
+            <input type="text" id="fname" placeholder="Entre votre prenom" >
+          </div>
+          <div class="input-box">
+            <span class="details">Votre Email</span>
+            <input type="text" id="email" placeholder="Entrer votre email" >
+          </div>
+          <div class="input-box">
+            <span class="details">Votre numero whatsapp complet</span>
+            <input type="text" id="number" placeholder="+1 809 451 3048" >
+          </div>
+          <div class="input-box">
+            <span class="details">Date de votre inscription</span>
+            <input type="date" id="date" placeholder="Votre date de naissance" >
+          </div>
+          <div class="input-box">
+            <span class="details">Comment avez vous trouvez ce site ?</span>
+            <input type="text" id="ref" placeholder="Entrer le nom ici">
+          </div>
+        </div>
+        <div class="gender-details">
+          <span class="gender-title">Selectionner a votre choix</span>
+          <div class="category">
+            <p>
+              <select name="sexe" id="sexe">
+                <option value="Homme">Homme</option>
+                <option value="Femme">Femme</option>
+                <option value="Autres">Autres</option>
+              </select>
+            </p>
+            <p>
+              <select name="niveau" id="niveau">
+                <option value="In. bureautique debutant">In. bureautique debutant</option>
+                <option value="In. bureautique intermediare">In. bureautique intermediare</option>
+                <option value="In. bureautique anvancé">In. bureautique anvancé</option>
+                <option value="Je veux m'initier">Je veux m'initier</option>
+              </select>
+            </p>
+            <p>
+              <select name="mat" id="mat">
+                <option value="Smartphone">Smartphone</option>
+                <option value="Computer">Computer</option>
+              </select>
+            </p>
+          </div>
+        </div>
+        <div class="button">
+          <button type="submit" onclick="send()">Je reserve ma place</button>
+          <input style="display: none;" type="submit" onclick="submit()" value="je reserve ma place">
+        </div>
+      </form>
+      <!--Mes reseau sociaux ici-->
+      <div class="middle">
+        <h1>Partager ceci a vos amis</h1>
+    <a class="btn facebook-btn" href="#" target="_blank">
+        <i class="fab fa-facebook-f"></i>
+    </a>
+    <a class="btn twitter-btn" href="#" target="_blank">
+        <i class="fab fa-twitter"></i>
+    </a>
+    <a class="btn whatsapp-btn" href="#" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+    <a class="btn" href="https://youtube.com/lepoeteht" target="_blank">
+        <i class="fab fa-youtube"></i>
+    </a>
 
-    <script>
-        document.getElementById("message").style.display = 'none';
-        document.getElementById("form").style.display = 'block';
-       
-    </script>
-     <script>
-        const scriptURL = 'https://script.google.com/macros/s/AKfycby33179uPOqjdICPq_ukGIRtw-PwEEdmB2lLrUtyQCNk2UjaTWRr2ZCoWoGPAATbOPH/exec'
-        const form = document.forms['google-sheet']
-      
-        form.addEventListener('submit', e => {
-          e.preventDefault()
-          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-            .then(response => document.getElementById("form").style.display = 'none' ,document.getElementById("message").style.display = 'block' )
-            .catch(error => console.error('Error!', error.message))
-        })
-      </script>
+    <img
+    class="pinterest-img"
+    src=""
+    alt=""
+    />
+    </div>
+  </div>
+  <script src="js/signup.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-database.js"></script> 
+  
+  <script>
+     var firebaseConfig = {
+      apiKey: "AIzaSyAwnrdMHIkFmAPHHOJhWRL-Tz0hSniCGcY",
+      authDomain: "votreprof-e3009.firebaseapp.com",
+      databaseURL: "https://votreprof-e3009-default-rtdb.firebaseio.com",
+      projectId: "votreprof-e3009",
+      storageBucket: "votreprof-e3009.appspot.com",
+      messagingSenderId: "1044359996340",
+      appId: "1:1044359996340:web:179fc5a911ef0d9a71c8e1",
+      measurementId: "G-LGH5WBR6G7"
+  
+          };
+          // Initialize Firebase
+          firebase.initializeApp(firebaseConfig);
+          </script>
+
+          <script>
+           function fermer() {
+          document.getElementById("message").style.display = "none";
+        }
+        document.getElementById('message').style.display = 'none';
+        document.getElementById('not').style.display = 'none';
+          </script>
+           <script>
+            function not() {
+           document.getElementById("not").style.display = "none";
+         }
+           </script>
+
+<script>
+  /* 
+
+Social Share Links:
+
+WhatsApp:
+https://wa.me/?text=[post-title] [post-url]
+
+Facebook:
+https://www.facebook.com/sharer.php?u=[post-url]
+
+Twitter:
+https://twitter.com/share?url=[post-url]&text=[post-title]
+
+Pinterest:
+https://pinterest.com/pin/create/bookmarklet/?media=[post-img]&url=[post-url]&is_video=[is_video]&description=[post-title]
+
+LinkedIn:
+https://www.linkedin.com/shareArticle?url=[post-url]&title=[post-title]
+
+*/
+
+const facebookBtn = document.querySelector(".facebook-btn");
+const twitterBtn = document.querySelector(".twitter-btn");
+const whatsappBtn = document.querySelector(".whatsapp-btn");
+var message = document.getElementById('ul');
+
+function init() {
+
+let postUrl = encodeURI(document.location.href);
+let postTitle = encodeURI("Apprendre la programmation web\nFormation 6 decembre pour débutant\nLa base du langage html\n\nComment créer une page web\n\nLa structure d'une page web\nComment intégrer du css dans une page html\nComment heberger gratuitement votre page web\n\n Pour participer dans la formation, juste cliquer sur le lien pour vous inscrire");
+
+
+facebookBtn.setAttribute(
+"href",
+`https://www.facebook.com/sharer.php?u=${postUrl}`
+);
+
+twitterBtn.setAttribute(
+"href",
+`https://twitter.com/share?url=${postUrl}&text=${postTitle}`
+);
+
+
+whatsappBtn.setAttribute(
+"href",
+`https://wa.me/?text=${postTitle} ${postUrl}`
+);
+}
+init();
+</script>
 </body>
 </html>

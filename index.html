@@ -48,14 +48,11 @@
     </header>
     <div class="content">
       <main>
-        
         <section class="home">
           <h1><span><strong>VotreProf</strong>:</span> Libre de vivre et libre d'apprendre</h1>
           <div id="home">
             <div class="img">
-              <img src="images/phone.png" class="mySlides">
-              <img src="images/1.png" class="mySlides">
-              <img src="images/2.png" class="mySlides">
+              <a href="images/home.jpg"><img src="images/home.jpg" class="mySlide"></a>
             </div>
             <div class="texte">
               <h1>Formation (html ,css et bureautique)</h1><hr>
@@ -268,6 +265,14 @@
         x.className = "topnav";
       }
     }
+    </script>
+    <script>
+      document.querySelector('div').addEventListener('contextmenu',disableRightClick);
+document.querySelector('img').addEventListener('contextmenu', disableRightClick);
+document.addEventListener('contextmenu', disableRightClick);
+function disableRightClick(e) {
+    e.preventDefault();
+}
     </script>
 </body>
 </html>

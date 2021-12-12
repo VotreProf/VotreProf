@@ -1,173 +1,781 @@
 <!DOCTYPE html>
-<!-- Created By CodingLab - www.codinglabweb.com -->
-<html lang="en" dir="ltr">
-  <head>
-      <!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-  })(window,document,'script','dataLayer','GTM-PLQHMCK');</script>
-  <!-- End Google Tag Manager -->
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="keywords" content="formation, informatique, livre en pdf," >
-  <link rel="icon" href="images/logo.png" type="image/x-icon">
-  <meta name="description" content=" Savoire comment faire et comment gerer votre temps avec l'informatique, si vous voulez vous initiez dans ce metier pour gagner votre vie">
-  <meta name="og:title" property="og:title" content="Plus de formation sur la technologie">
-  <meta name="robots" content="Formation, Informatique, technique, astuces">
-  <title>VotreProf</title>
-    <!---<title> Responsive Registration Form | CodingLab </title>--->
-    <script src="scripts/signup.js"></script>
-     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
-     <link rel="stylesheet" href="css/formation.css">
-   </head>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <script src="script/form.js"></script>
+    <style>
+      body{
+    background: white;
+    margin: 0px;
+    padding: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+*{
+    box-sizing: border-box;
+}
+@media screen and (max-width: 600px) {
+  main{
+    width: 100%;
+}
+section{
+    width: 100%;
+}
+main{
+    display: flex;
+    height: 100vh;
+    background: gray;
+    justify-content: center;
+    align-items: center;
+}
+.home div{
+    background: rgb(0, 138, 202);
+    width: 98%;
+    margin: auto;
+    box-shadow: 0px 0px 3px 1px black;
+}
+.home h1{
+    margin: 2px;
+    font-size: 7vw;
+    text-align: center;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    text-shadow: 0px 0px 2px 1px blue;
+}
+.home .material-icons{
+    font-size: 150px;
+    text-align: center;
+    margin: 2px;
+}
+.home p{
+    color: white;
+    font-size: 5vw;
+    text-align: center;
+    margin: 6px;
+    margin-top: 2px;
+}
+.home button{
+    background: blue;
+    border: none;
+    padding: 10px;
+    color: white;
+    font-size: 5vw;
+    margin: 5px;
+    cursor: pointer;
+}
+.home button:hover{
+    background: orangered;
+    border-radius: 2px;
+}
+.header{
+    background: blue;padding: 10px;
+}
+.header h1{
+    text-align: center;
+    color: white;
+    font-size: 6vw;
+    font-family: arial black;
+    margin: 3px;
+}
+.header p{
+    text-align: center;
+    color: white;
+    font-size: 4vw;
+    font-family: arial black;
+    margin: 3px;
+}
+.header p em{
+    color: red;
+    margin: 15px;
+}
+#signup{
+    display: none;
+    width: 98%;
+    margin: auto;
+    background: white;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+.field{
+    margin-top: 10px;
+    display: flex;
+    width: 100%;
+}
+.field .input{
+    width: 100%;
+    margin-right: 1px;
+}
+#login{
+    display: none;
+}
+.i{
+    width: 50px;
+    border: none;
+    display: flex;
+    background: orange;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+input[type="text"], input[type="email"], input[type="number"], input[type="date"]{
+    padding: 10px;
+    width: 100%;
+    margin: auto;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid blue;
+}
+#send{
+    background: blue;
+    width: 100%;
+    border: none;
+    padding: 10px;
+    margin-top: 10px;
+    color: white;
+    font-size: 5vw;
+    cursor: pointer;
+}
+#fermer{
+    background: red;
+    width: 100%;
+    border: none;
+    padding: 10px;
+    margin-top: 10px;
+    color: white;
+    font-size: 5vw;
+    cursor: pointer;
+}
+select{
+    padding: 11.5px;
+    width: 100%;
+    margin: auto;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid blue;
+}
+.select{
+    border: 1px solid red;
+    width: 50px;
+}
+#code{
+    background: black;
+    color: white;
+    padding: 10px;
+    width: 50px;
+    margin: auto;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid blue;
+}
+
+#message{
+    width: 90%;
+    background: white;
+    box-shadow: 0px 0px  3px 1px black;
+    padding: 20px;
+    height: auto;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+  }
+  #message div{
+    align-items: center;
+    justify-content: center;
+  }
+  #message h1{
+    margin-top: 15px;
+    color: orangered;
+    text-align: center;
+  }
+
+  #message i{
+    font-size: 200px;
+    color: blue;
+  }
+  .close{
+    background: black;
+    height: 50px;
+    margin-top: -15px;
+  }
+  .close h1{
+    color: rgb(3, 3, 78);
+  }
+  #c{
+    box-shadow: 0px 0px 3px 1px blue;
+    width: 30px;
+    height: 30px;
+    top: 8%;
+    left: 30px;
+    cursor:pointer;
+    margin-bottom: 20px;
+    border-radius: 50px;
+    color: red;
+    background: white;
+    padding: 3px;
+    position: absolute;
+  }
+  }
+
+main{
+  width: 70%;
+  margin: auto;
+    display: flex;
+    height: 100%;
+    background: rgb(0, 36, 197);
+    justify-content: center;
+    align-items: center;
+}
+.home div{
+    background: rgb(0, 138, 202);
+    width: 68%;
+    margin: auto;
+    box-shadow: 0px 0px 3px 1px black;
+}
+.home h1{
+    margin: 2px;
+    font-size: 28px;
+    text-align: center;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    text-shadow: 0px 0px 2px 1px blue;
+}
+.home .material-icons{
+    font-size: 150px;
+    text-align: center;
+    margin: 2px;
+}
+.home p{
+    color: white;
+    font-size: 18px;
+    text-align: center;
+    margin: 6px;
+    margin-top: 2px;
+}
+.home button{
+    background: blue;
+    border: none;
+    padding: 10px;
+    color: white;
+    font-size: 16px;
+    margin: 5px;
+    cursor: pointer;
+}
+.home button:hover{
+    background: orangered;
+    border-radius: 2px;
+}
+.header{
+    background: blue;padding: 10px;
+}
+.header h1{
+    text-align: center;
+    color: white;
+    font-size: 20px;
+    font-family: arial black;
+    margin: 3px;
+}
+.header p{
+    text-align: center;
+    color: white;
+    font-size: 16px;
+    font-family: arial black;
+    margin: 3px;
+}
+.header p em{
+    color: red;
+    margin: 15px;
+}
+#signup{
+    display: none;
+    width: 98%;
+    margin: auto;
+    background: white;
+    padding: 10px;
+    margin-bottom: 20px;
+    margin-left: 10px;
+}
+#signup .detail{
+  width: 100%;
+  height: 100%;
+  
+}
+#signup .detail img{
+  width: 100%;
+}
+.field{
+    margin-top: 10px;
+    display: flex;
+    width: 100%;
+}
+.field .input{
+    width: 100%;
+    margin-right: 1px;
+}
+#login{
+    display: none;
+}
+.i{
+    width: 50px;
+    border: none;
+    display: flex;
+    background: orange;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+input[type="text"], input[type="email"], input[type="number"], input[type="date"]{
+    padding: 10px;
+    width: 100%;
+    margin: auto;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid blue;
+}
+#send{
+    background: blue;
+    width: 100%;
+    border: none;
+    padding: 10px;
+    margin-top: 10px;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+}
+#fermer{
+    background: red;
+    width: 100%;
+    border: none;
+    padding: 10px;
+    margin-top: 10px;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+}
+select{
+    padding: 11.5px;
+    width: 100%;
+    margin: auto;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid blue;
+}
+.select{
+    border: 1px solid red;
+    width: 50px;
+}
+#code{
+    background: black;
+    color: white;
+    padding: 10px;
+    width: 50px;
+    margin: auto;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid blue;
+}
+
+#message{
+    width: 90%;
+    background: white;
+    box-shadow: 0px 0px  3px 1px black;
+    padding: 20px;
+    height: auto;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+  }
+  #message div{
+    align-items: center;
+    justify-content: center;
+  }
+  #message h1{
+    margin-top: 15px;
+    color: orangered;
+    text-align: center;
+  }
+
+  #message i{
+    font-size: 200px;
+    color: blue;
+  }
+  .close{
+    background: black;
+    height: 50px;
+    margin-top: -15px;
+  }
+  .close h1{
+    color: rgb(3, 3, 78);
+  }
+  #c{
+    box-shadow: 0px 0px 3px 1px blue;
+    width: 30px;
+    height: 30px;
+    top: 8%;
+    left: 30px;
+    cursor:pointer;
+    margin-bottom: 20px;
+    border-radius: 50px;
+    color: red;
+    background: white;
+    padding: 3px;
+    position: absolute;
+  }
+
+  .sign{
+    display: flex;
+    justify-content: space-around;
+  }
+  #sign .detail{
+    margin-right: 10px;
+  width: 100%;
+  height: 100%;
+}
+#signup .detail img{
+  width: 100%;
+  margin-right: 10px;
+}
+.signup{
+  width: 70%;
+  margin-right: 10px;
+  border: 1px solid red;
+}
+#signup{
+  border: 1pc solid yellow;
+}
+
+
+/* bouton resesosyo isi*/
+.middle{
+  width: 100%;
+  text-align: center;
+}
+.btn{
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  background: #f1f1f1;
+  margin: 10px;
+  border-radius: 30%;
+  box-shadow: 0 5px 15px -5px #00000070;
+  color: #3498db;
+  overflow: hidden;
+  position: relative;
+}
+.btn i{
+  line-height: 40px;
+  font-size: 20px;
+  transition: 0.2s linear;
+}
+.btn:hover i{
+  transform: scale(1.3);
+  color: #f1f1f1;
+}
+.btn::before{
+  content: "";
+  position: absolute;
+  width: 120%;
+  height: 120%;
+  background: #3498db;
+  transform: rotate(45deg);
+  left: -110%;
+  top: 90%;
+}
+.btn:hover::before{
+  animation: aaa 0.7s 1;
+  top: -10%;
+  left: -10%;
+}
+@keyframes aaa {
+  0%{
+    left: -110%;
+    top: 90%;
+  }50%{
+    left: 10%;
+    top: -30%;
+  }100%{
+    top: -10%;
+    left: -10%;
+  }
+}
+    </style>
+</head>
 <body>
-   <!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PLQHMCK"
-  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-  <!-- End Google Tag Manager (noscript) -->
-  <div class="container">
-    <div class="title">Formation sur la programmation web en html et css</div>
-    <div id="message" onclick="ferme()">
-      <div>
-        <div class="close">
-          <button id="c" onclick="fermer()">X</button>
-          <h1>Votre<span>Prof</span> Formation</h1>
-        </div>
-       <center>
-        <h1>Merci pour votre inscripiton</h1><hr>
-        <i class="material-icons">mark_email_read</i>
-        <p>
-          Téchérger le plan de la formation en pdf,
-        </p>
-        <a href="cours/plan du cours html.pdf" download="plan du cours html.pdf"><button>Télécharger le plan</button></a>
-       </center>
-      </div>
-    </div>
-    <div class="content">
-      <div class="form">
-        <div id="not">
-          <i class="material-icons">lock</i>
-          <p id="msg"></p>
-          <button id="cd" onclick="not()">Fermer</button>
-        </div>
-        <div class="user-details">
-          <div class="input-box">
-            <span class="details">Votre Nom</span>
-            <input type="text" id="name" placeholder="Entrer votre nom">
-          </div>
-          <div class="input-box">
-            <span class="details">Votre Prenom</span>
-            <input type="text" id="fname" placeholder="Entre votre prenom" >
-          </div>
-          <div class="input-box">
-            <span class="details">Votre Email</span>
-            <input type="text" id="email" placeholder="Entrer votre email" >
-          </div>
-          <div class="input-box">
-            <span class="details">Votre numero whatsapp complet</span>
-            <input type="text" id="number" placeholder="+1 809 451 3048" >
-          </div>
-          <div class="input-box">
-            <span class="details">Date de votre inscription</span>
-            <input type="date" id="date" placeholder="Votre date de naissance" >
-          </div>
-          <div class="input-box">
-            <span class="details">Comment avez vous trouvez ce site ?</span>
-            <input type="text" id="ref" placeholder="Entrer le nom ici">
-          </div>
-        </div>
-        <div class="gender-details">
-          <span class="gender-title">Selectionner a votre choix</span>
-          <div class="category">
-            <p>
-              <select name="sexe" id="sexe">
-                <option value="Homme">Homme</option>
-                <option value="Femme">Femme</option>
-                <option value="Autres">Autres</option>
-              </select>
-            </p>
-            <p>
-              <select name="niveau" id="niveau">
-                <option value="In. bureautique debutant">In. bureautique debutant</option>
-                <option value="In. bureautique intermediare">In. bureautique intermediare</option>
-                <option value="In. bureautique anvancé">In. bureautique anvancé</option>
-                <option value="Je veux m'initier">Je veux m'initier</option>
-              </select>
-            </p>
-            <p>
-              <select name="mat" id="mat">
-                <option value="Smartphone">Smartphone</option>
-                <option value="Computer">Computer</option>
-              </select>
-            </p>
-          </div>
-        </div>
-        <div class="button">
-          <button type="submit" onclick="send()">Je reserve ma place</button>
-          <input style="display: none;" type="submit" onclick="submit()" value="je reserve ma place">
-        </div>
-      </div class="form">
-      <!--Mes reseau sociaux ici-->
-      <div class="middle">
-        <h1>Partager ceci a vos amis</h1>
-    <a class="btn facebook-btn" href="#" target="_blank">
-        <i class="fab fa-facebook-f"></i>
-    </a>
-    <a class="btn twitter-btn" href="#" target="_blank">
-        <i class="fab fa-twitter"></i>
-    </a>
-    <a class="btn whatsapp-btn" href="#" target="_blank">
-        <i class="fab fa-whatsapp"></i>
-    </a>
-    <a class="btn" href="https://youtube.com/lepoeteht" target="_blank">
-        <i class="fab fa-youtube"></i>
-    </a>
+    <main>
+        <section>
+            <section class="home" id="home-home">
+                <div >
+                    <center>
+                        <h1>Formation html et css </h1>
+                        <i class="material-icons" style="color: rgb(255, 0, 0);">code</i>
+                        <p>
+                            Initiez-vous en programmation web (html & css)Inscrivez-vous
+                            et telecharger le plan de la formation gratuit.
+                            <br>
+                            <em style="color: red;">Nouvelles session 15 Decembre 2021</em>
+                        </p>
+                        <button onclick="show()">Enregister vous pour cette session </button>
+                    </center>
+                </div>
+            </section>
 
-    <img
-    class="pinterest-img"
-    src=""
-    alt=""
-    />
-    </div>
-  </div>
-  <script src="js/signup.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-app.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-auth.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-database.js"></script> 
-  
-  <script>
-     var firebaseConfig = {
-      apiKey: "AIzaSyAwnrdMHIkFmAPHHOJhWRL-Tz0hSniCGcY",
-      authDomain: "votreprof-e3009.firebaseapp.com",
-      databaseURL: "https://votreprof-e3009-default-rtdb.firebaseio.com",
-      projectId: "votreprof-e3009",
-      storageBucket: "votreprof-e3009.appspot.com",
-      messagingSenderId: "1044359996340",
-      appId: "1:1044359996340:web:179fc5a911ef0d9a71c8e1",
-      measurementId: "G-LGH5WBR6G7"
-  
-          };
-          // Initialize Firebase
-          firebase.initializeApp(firebaseConfig);
-          </script>
+            <div id="message" onclick="ferme()">
+                <div>
+                  <div class="close">
+                    <button id="c" onclick="fermer()">X</button>
+                    <h1>Votre<span>Prof</span> Formation</h1>
+                  </div>
+                 <center>
+                  <h1>Merci pour votre inscripiton</h1><hr>
+                  <i class="material-icons">mark_email_read</i>
+                  <p>
+                    Téchérger le plan de la formation en pdf,
+                  </p>
+                  <a href="cours/plan du cours html.pdf" download="plan du cours html.pdf"><button>Télécharger le plan</button></a>
+                 </center>
+                </div>
+              </div>
 
-          <script>
-           function fermer() {
-          document.getElementById("message").style.display = "none";
+            <section id="signup">
+                <div class="sign">
+                  <div class="detail">
+                    <div class="header">
+                      <h1>Reserver votre place</h1>
+                      <p>Formation gratuite pour débutant</p>
+                      <p id="msg"></p>
+                  </div>
+                    <img src="images/cc.jpg" alt="">
+                  </div>
+                <div class="signup">
+                    <div class="header">
+                        <p id="msg"></p>
+                    </div>
+                    <div>
+                        <div class="field">
+                            <div class="input">
+                                <input type="text"  id="name" placeholder="Entrer Votre Nom">
+                            </div>
+                        </div>
+
+                        <div class="field">
+                            <div class="input">
+                                <input type="text"  id="pname" placeholder="Entrer Votre Prenom">
+                            </div>
+                        </div>
+    
+                        <div class="field">
+                            <div class="input">
+                                <input type="email" id="email" placeholder="Entrer votre email">
+                            </div>
+                        </div>
+    
+                        <div class="field">
+                            <div class="select">
+                                <select id="code"  placeholder="Code" value="Code">
+                                    <option value="">Code pays</option>
+                                    <option value="+229">Benin (+229)</option>
+                                    <option value="+257">Burundi (+257)</option>
+                                    <option value="+226">Burkina Faso (+226)</option>
+                                    <option value="+237">Cameroon (+237)</option>
+                                    <option value="+1">Canada (+1)</option>
+                                    <option value="+238">Cape Verde (+238)</option>
+                                    <option value="+236">Central African Republic (+236)</option>
+                                    <option value="+242">Congo (+242)</option>
+                                    <option value="+242">Congo, the Democratic Republic of the (+242)</option>
+                                    <option value="+225">Cote D'Ivoire (+225)</option>
+                                    <option value="+1809">Dominican Republic (+1809)</option>
+                                    <option value="+298">Faroe Islands (+298)</option>
+                                    <option value="+594">French Guiana (+594)</option>
+                                    <option value="+509">Haiti (+509)</option>
+                                    <option value="+352">Luxembourg (+352)</option>
+                                    <option value="+853">Macao (+853)</option>
+                                    <option value="+389">Macedonia, the Former Yugoslav Republic of (+389)</option>
+                                    <option value="+261">Madagascar (+261)</option>
+                                    <option value="+223">Mali (+223)</option>
+                                    <option value="+377">Monaco (+377)</option>
+                                    <option value="+227">Niger (+227)</option>
+                                    <option value="+234">Nigeria (+234)</option>
+                                    <option value="+262">Reunion (+262)</option>
+                                    <option value="+250">Rwanda (+250)</option>
+                                    <option value="+268">Swaziland (+268)</option>
+                                    <option value="+228">Togo (+228)</option>
+                                    <option value="+690">Tokelau (+690)</option>
+                                    <option value="+676">Tonga (+676)</option>
+                                    <option value="+260">Zambia (+260)</option>
+                                    <option value="+263">Zimbabwe (+263)</option>
+                                  </select>
+                            </div>
+                            <div class="input">
+                                <input type="number"  id="number" placeholder="Entrer votre numero">
+                            </div>
+                        </div>
+    
+                        <div class="field">
+                            <div class="input">
+                                <select  id="sexe">
+                                    <option value="">Votre sexe</option>
+                                    <option value="Homme">Homme</option>
+                                    <option value="Femme">Femme</option>
+                                    <option value="Autres">Autres</option>
+                                  </select>
+                            </div>
+                            <div class="input">
+                                <input type="date"  id="date" placeholder="Date de votre inscripiton">
+                            </div>
+                        </div>
+
+                        <div class="field">
+                            <div class="input">
+                                <select  id="niveau">
+                                    <option value="">Niveau information</option>
+                                    <option value="In. bureautique debutant">In. bureautique debutant</option>
+                                    <option value="In. bureautique intermediare">In. bureautique intermediare</option>
+                                    <option value="In. bureautique anvancé">In. bureautique anvancé</option>
+                                    <option value="Je veux m'initier">Je veux m'initier</option>
+                                  </select>
+                            </div>
+                            <div class="input">
+                                <select  id="mat">
+                                    <option value="">Materiel utilisé</option>
+                                    <option value="Smartphone">Smartphone</option>
+                                    <option value="Computer">Computer</option>
+                                  </select>
+                            </div>
+                            <div class="input">
+                                <select  id="ref">
+                                    <option value="">Référence</option>
+                                    <option value="Site Votre Prof">Site Votre Prof</option>
+                                    <option value="Application VotreProf">Application VotreProf</option>
+                                  </select>
+                            </div>
+                        </div>
+                        <button id="send" type="submit" class="common_btn" onclick="send()">Register Now</button>
+                        <button id="fermer" type="submit" class="common_btn" onclick="fermer()">Register Now</button>
+                         <!--Mes reseau sociaux ici-->
+                 <div class="middle">
+                  <h1>Abone ak nou sou rezo sosyo yo kounye a</h1>
+                 <a class="btn facebook-btn" href="#" target="_blank">
+                   <i class="fab fa-facebook-f"></i>
+                 </a>
+                 <a class="btn twitter-btn" href="#" target="_blank">
+                   <i class="fab fa-twitter"></i>
+                 </a>
+                 <a class="btn whatsapp-btn" href="#" target="_blank">
+                   <i class="fab fa-whatsapp"></i>
+                 </a>
+                 <a class="btn" href="https://youtube.com/lepoeteht" target="_blank">
+                   <i class="fab fa-youtube"></i>
+                 </a>
+
+                 <img
+                 class="pinterest-img"
+                 src=""
+                 alt=""
+               />
+               </div>
+                    </div>
+                    <h3 id="success-msg" style="text-align: center !important; margin-top:190px !important; display:none; color:#fff"> Your Request has been posted to Google Spreadsheet</h3>
+                </div>
+                </div>
+            </section>
+        </section>
+    </main>
+    <script src="script/form.js"></script>
+      <script>
+          function fermer() {
+            document.getElementById('signup').style.display = 'none';
+            document.getElementById('message').style.display ='none';
+            document.getElementById('home-home').style.display = 'block';
         }
-        document.getElementById('message').style.display = 'none';
-        document.getElementById('not').style.display = 'none';
-          </script>
-           <script>
-            function not() {
-           document.getElementById("not").style.display = "none";
-         }
-           </script>
+      </script>
+      <script>
+        function show() {
+            document.getElementById('signup').style.display = 'block';
+            document.getElementById('message').style.display ='none';
+            document.getElementById('home-home').style.display = 'none';
+        }
+      </script>
+      <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-app.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-auth.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-database.js"></script> 
+      
+      <script>
+         var firebaseConfig = {
+          apiKey: "AIzaSyAwnrdMHIkFmAPHHOJhWRL-Tz0hSniCGcY",
+          authDomain: "votreprof-e3009.firebaseapp.com",
+          databaseURL: "https://votreprof-e3009-default-rtdb.firebaseio.com",
+          projectId: "votreprof-e3009",
+          storageBucket: "votreprof-e3009.appspot.com",
+          messagingSenderId: "1044359996340",
+          appId: "1:1044359996340:web:179fc5a911ef0d9a71c8e1",
+          measurementId: "G-LGH5WBR6G7"
+      
+              };
+              // Initialize Firebase
+              firebase.initializeApp(firebaseConfig);
+
+              var codeV, lnameV, pnameV, emailV, numberV, dateV, sexeV, refV;
+function send() {
+     nameV = document.getElementById('name').value;
+     pnameV = document.getElementById('pname').value;
+     emailV = document.getElementById('email').value;
+     numberV = document.getElementById('number').value;
+     dateV = document.getElementById('date').value;
+     refV = document.getElementById('ref').value;
+     sexeV = document.getElementById('sexe').value;
+     nivV = document.getElementById('niveau').value;
+     matV = document.getElementById('mat').value;
+     if(nameV == ""){
+      document.getElementById('msg').innerHTML = 'Entrer votre nom';
+    }else if (pnameV == ""){
+      document.getElementById('msg').innerHTML = 'Entrer votre prénom';
+    }else if (emailV == ""){
+      document.getElementById('msg').innerHTML = 'Entrer votre Email';
+    }else if (numberV == ""){
+      document.getElementById('msg').innerHTML = 'Entrer votre numero';
+    }else if (dateV == ""){
+      document.getElementById('msg').innerHTML = 'La date de votre inscription';
+    }else if (refV == ""){
+      document.getElementById('msg').innerHTML = 'Si vous n"avez pas de reference enter <Persone>';
+    }else if (sexeV == ""){
+      document.getElementById('msg').innerHTML = 'Selectionnner votre sexe';
+    }else if (nivV == ""){
+      document.getElementById('msg').innerHTML = 'Votre niveau en informatique';
+    }else if (matV == ""){
+      document.getElementById('msg').innerHTML = 'Que materiel que vous utiliser pour travailler?';
+    }else{
+    firebase.database().ref('Formation html&css/' + nameV).set({
+      ANAME: nameV + pnameV,
+      Email: emailV,
+      NUMBER: numberV,
+      DATE: dateV,
+      REFERENCE: refV,
+      SEXE: sexeV,
+      NIVEAU: nivV,
+      MATERIELS: matV,
+  });
+  document.getElementById('message').style.display = 'block';
+  document.getElementById('signup').style.display = 'none';
+  document.getElementById('name').value = '';
+  document.getElementById('pname').value = '';
+  document.getElementById('email').value = '';
+  document.getElementById('number').value = '';
+  document.getElementById('ref').value = '';
+}
+  }
+      </script>
 
 <script>
   /* 
@@ -199,7 +807,7 @@ var message = document.getElementById('ul');
 function init() {
 
 let postUrl = encodeURI(document.location.href);
-let postTitle = encodeURI("Apprendre la programmation web\nFormation 6 decembre pour débutant\nLa base du langage html\n\nComment créer une page web\n\nLa structure d'une page web\nComment intégrer du css dans une page html\nComment heberger gratuitement votre page web\n\n Pour participer dans la formation, juste cliquer sur le lien pour vous inscrire");
+let postTitle = encodeURI("Programmation web en html et css\nFormation pour débutant en programmation web\n\nDans cette formation ,je t'apprends:\n\nLa base de la prommation web?\nComment créer votre premier page web?\nComment héberger gratuitement?\n\n");
 
 
 facebookBtn.setAttribute(
@@ -220,5 +828,6 @@ whatsappBtn.setAttribute(
 }
 init();
 </script>
+
 </body>
 </html>

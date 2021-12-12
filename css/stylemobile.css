@@ -1,0 +1,200 @@
+
+
+/* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
+@media screen and (max-width: 600px) {
+    .topnav a:not(:first-child), .dropdown .dropbtn {
+      display: none;
+    }
+    .topnav a.icon {
+      float: right;
+      display: block;
+    }
+  }
+  
+  /* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
+  @media screen and (max-width: 600px) {
+    .topnav.responsive {position: relative;}
+    .topnav.responsive a.icon {
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+    .topnav.responsive a {
+      float: none;
+      display: block;
+      text-align: left;
+    }
+    .topnav.responsive .dropdown {float: none;}
+    .topnav.responsive .dropdown-content {position: relative;}
+    .topnav.responsive .dropdown .dropbtn {
+      display: block;
+      width: 100%;
+      text-align: left;
+    }
+  }
+
+    /*  entete de mon site web */
+    @media screen and (max-width: 600px) {
+        body{
+            box-sizing: border-box;
+            padding: 0px;
+            margin: 0px;
+            overflow: none;
+        }
+        
+        *{
+            box-sizing: border-box;
+            padding: 0px;
+            margin: 0px;
+            overflow: none;
+        }
+       header{
+           width: 100%;
+           height: 100%;
+           margin-bottom: 20px;
+       }
+       .header, .header-item{
+           width: 100%;
+           flex-wrap: wrap;
+           margin: 2px;
+           padding: 1px;
+       }
+
+       .header-item p{
+        font-size: 5vw;
+        text-align: justify;
+        color: black;
+        width: 100%;
+    }
+    .header-item h1{
+      font-size: 6vw;
+      margin: 0px;
+      text-align: center;
+      color: blue;
+      font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+      }
+  .header-item h2{
+      font-size: 5.5vw;
+      text-align: center;
+      color: orangered;
+      }
+      .header-item .button{
+          border: 1px solid red;
+          width: 100%;
+          display: flex;
+      }
+      .header-item button{
+          width: 98%;
+          border: 1px solid blue;
+          background: rgba(0, 0, 90, 0.74);
+          color: white;
+          font-size: 4vw;
+          padding: 5px;
+          cursor: pointer;
+      }
+       .container{
+           margin-top: 10px;
+       }
+       .bar-doutils{
+        width:100%;
+        max-height:500px;
+        margin:0;
+        background:#abc;
+        overflow-y:hidden;
+        overflow-x:auto;
+       }
+       /* Hide scrollbar for Chrome, Safari and Opera */
+.bar-doutils::-webkit-scrollbar {
+    display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.bar-doutils {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+       .bar-doutils div{
+           min-width: 100%;
+       }
+
+       .bar-doutils div h1{
+        font-size: 6vw;
+        color: rgb(0, 51, 192);
+        text-align: center;
+        margin: 2px;
+    }
+    .bar-doutils div p{
+        font-size: 5vw;
+        color: black;
+        text-align: justify;
+        margin: 4px;
+    }
+       main{
+           width: 100%;
+       }
+       .home .detail{
+           margin: 1px;
+           padding: 1px;
+           width: 99%;
+       }
+       .home .detail p{
+           width: 99%;
+           margin: 0px;
+           text-align: justify;
+           font-size: 5vw;
+       }
+       .home h1{
+        font-size: 6vw;
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        color: blue;
+        text-align: center;
+        margin: 10px 10px 1px 10px;
+    }
+    .home h2{
+     font-size: 5vw;
+     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+     color: rgb(255, 0, 0);
+     text-align: center;
+     margin: 10px 10px 1px 10px;
+ }
+
+    .home .detail p{
+        font-size: 5vw;
+        text-align: justify;
+    }
+    .home button{
+        font-size: 5vw;
+        padding: 5px;
+    }
+
+    #subtitulo{
+        text-align: center;
+        margin-bottom: 80px;
+        margin-top: 20px;
+        color: white;
+      }
+      legend{
+        font-size: 4vw;
+        padding: 0 7px;
+      }
+      fieldset{
+        width: 100%;
+        margin: 0 auto;
+        margin-top: 10px;
+        text-align: center;
+        border-radius: 5px;
+        padding: 10px 30px;
+      }
+      fieldset p{
+          font-size: 5vw;
+          color: red;
+          font-style: italic;
+      }
+      #reloj{
+        font-size: 6vw;
+        color: black;
+      }
+      }
+
+
+  

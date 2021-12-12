@@ -195,6 +195,12 @@ button {
  .container{
   max-width: 100%;
 }
+.container .title{
+  margin-top:20px ;
+  font-size: 25px;
+  font-weight: 500;
+  position: relative;
+}
 .form .user-details .input-box{
     margin-bottom: 15px;
     width: 100%;
@@ -213,6 +219,9 @@ button {
   @media(max-width: 459px){
   .container .content .category{
     flex-direction: column;
+    margin: 0px;
+    width: 100%;
+    padding: 0px;
   }
 }
 

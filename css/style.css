@@ -1,238 +1,609 @@
 body{
-  font: 15px/1.5 Arial, Helvetica,sans-serif;
-  padding:0;
-  margin:0;
-  background-color:#f4f4f4;
-}
-*{
-  box-sizing: border-box;
-}
-
-/* Global */
-.container{
-  width:80%;
-  margin:auto;
-  overflow:hidden;
-}
-
-ul{
-  margin:0;
-  padding:0;
-}
-
-.button_1{
-  height:38px;
-  background:#e8491d;
-  border:0;
-  padding-left: 20px;
-  padding-right:20px;
-  color:#ffffff;
-}
-
-.dark{
-  padding:15px;
-  background:#35424a;
-  color:#ffffff;
-  margin-top:10px;
-  margin-bottom:10px;
-}
-
-/* Header **/
-header{
-  background:#35424a;
-  color:#ffffff;
-  padding-top:30px;
-  min-height:70px;
-  border-bottom:#e8491d 3px solid;
-}
-
-header a{
-  color:#ffffff;
-  text-decoration:none;
-  text-transform: uppercase;
-  font-size:16px;
-}
-
-header li{
-  float:left;
-  display:inline;
-  padding: 0 20px 0 20px;
-}
-
-header #branding{
-  float:left;
-}
-
-header #branding h1{
-  margin:0;
-}
-
-header nav{
-  float:right;
-  margin-top:10px;
-}
-
-header .highlight, header .current a{
-  color:#e8491d;
-  font-weight:bold;
-}
-
-header a:hover{
-  color:#cccccc;
-  font-weight:bold;
-}
-
-/* Showcase */
-#showcase{
-  min-height:400px;
-  background:url('../img/showcase.jpg') no-repeat 0 -400px;
-  text-align:center;
-  color:#ffffff;
-}
-
-#showcase h1{
-  margin-top:100px;
-  font-size:55px;
-  margin-bottom:10px;
-}
-
-#showcase p{
-  font-size:20px;
-}
-
-/* Newsletter */
-#newsletter{
-  width: 100%;
-  background: black;
-}
-#newsletter form{
-  width: 70%;
-  margin: auto;
-}
-#newsletter input[type=email]{
-  padding: 10px;
-}
-#newsletter select{
-  padding: 10px;
-  width: 50px;
-}
-/* Boxes */
-#boxes{
-  margin-top:20px;
-}
-
-#boxes .box{
-  float:left;
-  text-align: center;
-  width:30%;
-  padding:10px;
-}
-
-#boxes .box img{
-  width:90px;
-}
-
-/* Sidebar */
-aside#sidebar{
-  float:right;
-  width:30%;
-  margin-top:10px;
-}
-
-aside#sidebar .quote input, aside#sidebar .quote textarea{
-  width:90%;
-  padding:5px;
-}
-
-/* Main-col */
-article#main-col{
-  float:left;
-  width:65%;
-}
-
-/* Services */
-ul#services li{
-  list-style: none;
-  padding:20px;
-  border: #cccccc solid 1px;
-  margin-bottom:5px;
-  background:#e6e6e6;
-}
-
-
-main{
-  border: 1px solid red;
-  width: 30px;
-}
-
-footer{
-  padding:20px;
-  margin-top:20px;
-  color:#ffffff;
-  background-color:#e8491d;
-  text-align: center;
-}
-
-/* Media Queries */
-@media(max-width: 768px){
-  header #branding,
-  header nav,
-  header nav li,
-  #newsletter h1,
-  #newsletter form,
-  #boxes .box,
-  article#main-col,
-  aside#sidebar{
-    float:none;
-    text-align: justify;
-    width:100%;
+    box-sizing: border-box;
     padding: 0px;
     margin: 0px;
+}
+button{
+    border: 1px solid orangered;
+    background: none;
+    color: blue;
+    font-size: 18px;
+    padding: 5px;
+    margin: 5px;
+    cursor: pointer;
+}
+button:hover{
+    border: none;
+    background: white;
+    border-color: blue;
+    color: orangered;
+    box-shadow: 0px 0px 2px 1px black;
+}
+/* menu Add a black background color to the top navigation */
+.topnav {
+    background-color: rgb(0, 133, 221);
+    overflow: hidden
   }
-  #boxes .container{
-    width: 100%;
-  }
-  #boxes .box{
-    float:none;
+  
+  /* Style the links inside the navigation bar */
+  .topnav a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
     text-align: center;
-    width:100%;
-    padding:1px;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
   }
-  body{
-    padding: 0px;
-    box-sizing: border-box;
+  
+  /* Add an active class to highlight the current page */
+  .active {
+    background-color: #000f3a;
+    color: white;
+  }
+  
+  /* Hide the link that should open and close the topnav on small screens */
+  .topnav .icon {
+    display: none;
+  }
+  
+  /* Dropdown container - needed to position the dropdown content */
+  .dropdown {
+    float: left;
+    overflow: hidden;
+  }
+  
+  /* Style the dropdown button to fit inside the topnav */
+  .dropdown .dropbtn {
+    font-size: 17px;
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+  }
+  
+  /* Style the dropdown content (hidden by default) */
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  /* Style the links inside the dropdown */
+  .dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+  }
+  
+  /* Add a dark background on topnav links and the dropdown button on hover */
+  .topnav a:hover, .dropdown:hover .dropbtn {
+    background-color: #555;
+    color: white;
+  }
+  
+  /* Add a grey background to dropdown links on hover */
+  .dropdown-content a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  
+  /* Show the dropdown menu when the user moves the mouse over the dropdown button */
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+
+  /* fin menu de mon site web ici*/
+
+
+  /* en tete de mon site, la parti header */
+  .header-item img{
+      width: 70%;
+      margin: 0 auto;
   }
   header{
-    padding-bottom:20px;
+      background-image: url('../images/b.png');
+      background-size: cover;
+      width: 100%;
+      height: 65vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+  }
+  .header{
+      background: rgba(255, 255, 255, 0.411);
+      width: 80%;
+      display: flex;
+      margin: 0 auto;
+      padding: 10px;
+  }
+  /*==================================================
+ * Effect 5
+ * ===============================================*/
+ .header
+{
+  position: relative;
+}
+.header:before, .header:after
+{
+  z-index: -1;
+  position: absolute;
+  content: "";
+  bottom: 25px;
+  left: 10px;
+  width: 50%;
+  top: 80%;
+  max-width:300px;
+  background: #777;
+  -webkit-box-shadow: 0 35px 30px rgb(0, 0, 0);
+  -moz-box-shadow: 0 35px 20px rgb(0, 0, 0);
+  box-shadow: 0 35px 20px rgb(0, 0, 0);
+  -webkit-transform: rotate(-8deg);
+  -moz-transform: rotate(-8deg);
+  -o-transform: rotate(-8deg);
+  -ms-transform: rotate(-8deg);
+  transform: rotate(-8deg);
+}
+.header:after
+{
+  -webkit-transform: rotate(8deg);
+  -moz-transform: rotate(8deg);
+  -o-transform: rotate(8deg);
+  -ms-transform: rotate(8deg);
+  transform: rotate(8deg);
+  right: 10px;
+  left: auto;
+}
+
+/*==================================================*/
+  .header-item{
+      width: 80%;
+      padding: 20px;
   }
 
-  #showcase h1{
-    margin-top:40px;
-    font-size: 6vw;
-
+  .header .texte{
+      background: white;
   }
-  #showcase h2{
-    font-size: 5vw;
+  
 
+  .header-item p{
+      font-size: 22px;
+      text-align: justify;
+      color: black;
+      width: 100%;
   }
-  #showcase p{
-    font-size: 4vw;
+  .header-item h1{
+      margin: 0px;
+    font-size: 30px;
+    text-align: center;
+    color: blue;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    }
+.header-item h2{
+    font-size: 28px;
+    text-align: center;
+    color: orangered;
+    }
+    .header-item .button{
+        border: 1px solid red;
+        width: 100%;
+        display: flex;
+    }
+    .header-item button{
+        width: 100%;
+        border: 1px solid blue;
+        background: rgba(0, 0, 90, 0.74);
+        color: white;
+        font-size: 18px;
+        padding: 15px;
+        cursor: pointer;
+    }
+    .header-item a{
+        text-decoration: none;
+        width: 100%;
+    }
 
-  }
-  #newsletter select{
+    /* fin de l'entete de mon site web*/
+
+    .container{
+        background: rgb(0, 92, 197);
+        height: 100%;
+    }
+    .bar-doutils{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 80%;
+        background:black;
+        height: max-content;
+        margin: 10px auto;
+    }
+    .bar-doutils div{
+        margin: 10px;
+        height: auto;
+        width: 100%;
+        background: white;
+        border-radius: 10px;
+    }
+    .bar-doutils div h1{
+        font-size: 18px;
+        color: rgb(0, 51, 192);
+        text-align: center;
+        margin: 2px;
+    }
+    .bar-doutils div p{
+        font-size: 14px;
+        color: black;
+        text-align: justify;
+        margin: 4px;
+    }
+
+      /* fin de la bar d'outils de mon site web*/
+       .content{
+           width: 100%;
+           height: 100%;
+           background-image: url(../images/back.jpg);
+           background-size: cover;
+       }
+       main{
+           width: 80%;
+           height: 100%;
+           margin: 0 auto;
+           background: white;
+       }
+       .home{
+           width: 100%;
+       }
+
+       .home .detail{
+           display: flex;
+           padding: 20px;
+           width: 100%;
+           justify-content: center;
+           align-items: center;
+       }
+       .home h1{
+           font-size: 30px;
+           font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+           color: blue;
+           text-align: center;
+           margin: 10px 10px 1px 10px;
+       }
+       .home h2{
+        font-size: 26px;
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        color: rgb(255, 0, 0);
+        text-align: center;
+        margin: 10px 10px 1px 10px;
+    }
+
+       .home .detail p{
+           font-size: 22px;
+           margin: 1px 40px 2px 40px;
+           width: 70%;
+           text-align: center;
+       }
+
+       .home button{
+           border: 1px solid blue;
+           background: white;
+           color: orangered;
+           font-size: 18px;
+           font-family: arial black;
+           font-weight: bolder;
+           padding: 10px;
+           margin: 20px;
+           cursor: pointer;
+       }
+
+       /* formulaire de contact de mon site web*/
+
+       /* date in time de mon site*/
+       h1{
+        text-align: center;
+        margin: 80px 0 20px 0;
+        color: black;
+      }
+      #subtitulo{
+        text-align: center;
+        margin-bottom: 80px;
+        color: white;
+      }
+      legend{
+        font-size: 1.7em;
+        padding: 0 7px;
+      }
+      fieldset{
+        width: 50%;
+        margin: 0 auto;
+        text-align: center;
+        border-radius: 5px;
+        padding: 10px 30px;
+      }
+      fieldset p{
+          font-size: 20px;
+          color: red;
+          font-style: italic;
+      }
+      #reloj{
+        font-size: 28px;
+        color: black;
+      }
+
+       @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
+
+#contact {
+  margin: 0px;
+  padding: 0px;
+  background-color: #fef1df;
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+  display: flex;
+}
+
+.contact-img{
     width: 100%;
-  }
-  #newsletter h1{
-    font-size: 5.1vw;
-  }
+    height: 100%;
+    background: blue;
+}
+.contact-img img{
+    width: 100%;
+}
 
-  #newsletter button, .quote button{
-    display:block;
-    width:100%;
-  }
+.form {
+    width: 100%;
+  padding: 30px;
+  padding-top: 1px;
+  background-color: white;
+  border-radius: 10px;
+}
+.form h1 {
+  font-size: 20px;
+  margin-top: 0px;
+}
+.form .separation {
+  width: 100%;
+  height: 1px;
+  margin: 0px;
+  background-color: #747cdf;
+}
+.form .corps-formulaire {
+  display: flex;
+  margin-bottom: 2px;
+}
+.form .corps-formulaire .groupe {
+  position: relative; /* Pour mettre positionner l’élément dans le flux normal de la page */
+  margin-top: 20px;
+  width: 100%;
+}
+.form .corps-formulaire .gauche .groupe input {
+  margin-top: 5px;
+  width: 90%;
+  padding: 10px 5px 10px 30px;
+  border: 1px solid #c9c9c9;
+  outline-color: #747cdf;
+  border-radius: 5px;
+}
+.form .corps-formulaire .gauche .groupe i {
+  position: absolute; /* positionné par rapport à son parent le plus proche positionné */
+  left: 0;
+  top: 25px;
+  padding: 9px 8px;
+  color: #747cdf;
+}
+.form .corps-formulaire .droite {
+  margin-left: 10px;
+  width: 50%;
+}
+.form .corps-formulaire .droite .groupe {
+  height: 100%;
+  width: 100%;
+}
+.form .corps-formulaire .droite .groupe textarea {
+  width: 90%;
+  margin-top: 5px;
+  padding: 10px;
+  background-color: #f1f1f1;
+  border: 2px solid #747cdf;
+  outline: none;
+  border-radius: 5px;
+  resize: none;
+  height: 72%;
+}
+.form .pied-formulaire button {
+  margin-top: 10px;
+  background-color: #747cdf;
+  color: white;
+  font-size: 15px;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  outline: none;
+  cursor: pointer;
+  transition: transform 0.5s;
+}
+.form .pied-formulaire button:hover {
+  transform: scale(1.05);
+}
 
-  #newsletter form input[type="email"], .quote input, .quote textarea{
-    width:100%;
-    margin-bottom:5px;
+@media screen and (max-width: 920px) {
+  .form .corps-formulaire .droite {
+    margin-left: 0px;
   }
 }
+       /* fin formulaire de contact de mon site web*/
+
+       /* Share Buttons */
+
+.share-btn-container {
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    padding: 16px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  
+  .share-btn-container a i {
+    font-size: 32px;
+  }
+  
+  .share-btn-container a {
+    margin: 12px 0;
+    transition: 500ms;
+  }
+  
+  .share-btn-container a:hover {
+    transform: scale(1.2);
+  }
+  
+  .share-btn-container .fa-facebook {
+    color: #3b5998;
+  }
+  
+  .share-btn-container .fa-twitter {
+    color: #1da1f2;
+  }
+  
+  
+  .share-btn-container .fa-youtube {
+    color: red;
+  }
+
+  /*formuliare de forum en popup de mon site web*/
+  .material-icons {
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;  /* Preferred icon size */
+    display: inline-block;
+    line-height: 1;
+    text-transform: none;
+    letter-spacing: normal;
+    word-wrap: normal;
+    white-space: nowrap;
+    direction: ltr;
+  }  
+  #forum{
+      display: none;
+  }
+  #forum i{
+      cursor: pointer;
+      width: max-content;
+      border-radius: 50%;
+      background: black;
+      position: absolute;
+    top: 7%;
+    left: 45%;
+    transform: translate(-50%, -50%); 
+  }
+  #forum i:hover{
+      background: white;
+      box-shadow: 0px 0px 5px 2px black;
+      color: orangered;
+  }
+  .forum .forum-infos h1{
+      color: black;
+      text-align: center;
+      margin: 1px;
+  }
+  .forum .forum-infos h2{
+    color: orangered;
+    text-align: center;
+    margin: 1px;
+}
+.forum .forum-infos img{
+    width: 100%;
+}
+.forum .forum-infos ul h3{
+    color: black;
+    margin: 1px;
+}
+.forum .forum-infos ul li{
+    color: black;
+    margin: 1px;
+}
+  .forum{
+      display: flex;
+      width: 50%;
+      padding: 1px;
+    background: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); 
+  }
+  .forum .forum-infos{
+    margin: 3px;
+      width: 100%;
+      height: 100%;
+      border: 1px solid blue;
+  }
+  .forum .form{
+      margin: 3px;
+      width: 100%;
+      border: 1px solid blue;
+  }
+
+  .forum .field{
+      display: flex;
+      justify-content: center;
+  }
+   .forum .field input[type="text"], input[type="email"], input[type="number"]{
+       width: 90%;
+       padding: 10px;
+       border: 0px;
+       outline: none;
+   }
+   .forum .field input[type="number"]{
+    width: 90%;
+    padding: 10px;
+    border: 0px;
+    outline: none;
+   }
+   .forum p{
+       text-align: left;
+       border-bottom: 2px solid red;
+       width: 100%;
+       margin: 10px;
+       font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+   }
+   .forum label{
+       color: black;
+   }
+   .field .code{
+       width: 20%;
+   }
+   .forum .form #code{
+    width: 80px;
+    height: 40px;
+    margin-top: 0px;
+    margin-right: 0px;
+    padding: 1px;
+    border: 0px;
+    outline: none;
+   }
+  
+   /*pied de mon site web*/
+   footer{
+       background: black;
+       height: 100%;
+   }
+   footer .colonne{
+       display: flex;
+       width: 80%;
+       color: white;
+       margin: 4px auto;
+   }

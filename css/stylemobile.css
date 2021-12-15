@@ -34,7 +34,7 @@
   }
 
     /*  entete de mon site web */
-    @media screen and (max-width: 600px) {
+    @media screen and (max-width: 800px) {
         body{
             box-sizing: border-box;
             padding: 0px;
@@ -61,20 +61,20 @@
        }
 
        .header-item p{
-        font-size: 5vw;
+        font-size: 4vw;
         text-align: justify;
         color: black;
         width: 100%;
     }
     .header-item h1{
-      font-size: 6vw;
+      font-size: 5.9vw;
       margin: 0px;
       text-align: center;
       color: blue;
       font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
       }
   .header-item h2{
-      font-size: 5.5vw;
+      font-size: 5.2vw;
       text-align: center;
       color: orangered;
       }
@@ -124,7 +124,7 @@
         margin: 2px;
     }
     .bar-doutils div p{
-        font-size: 5vw;
+        font-size: 4vw;
         color: black;
         text-align: justify;
         margin: 4px;
@@ -141,17 +141,17 @@
            width: 99%;
            margin: 0px;
            text-align: justify;
-           font-size: 5vw;
+           font-size: 4vw;
        }
        .home h1{
-        font-size: 6vw;
+        font-size: 5.9vw;
         font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
         color: blue;
         text-align: center;
         margin: 10px 10px 1px 10px;
     }
     .home h2{
-     font-size: 5vw;
+     font-size: 4.5vw;
      font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
      color: rgb(255, 0, 0);
      text-align: center;
@@ -159,11 +159,11 @@
  }
 
     .home .detail p{
-        font-size: 5vw;
+        font-size: 4vw;
         text-align: justify;
     }
     .home button{
-        font-size: 5vw;
+        font-size: 4vw;
         padding: 5px;
     }
 

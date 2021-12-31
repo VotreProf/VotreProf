@@ -1,0 +1,315 @@
+*{
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+}
+body{
+  background: white;
+  font-family: montserrat;
+  padding: 0;
+  margin: 0;
+}
+button{
+  padding: 10px;
+  border: rgb(0, 79, 170) 2px solid;
+  background: white;
+  font-size: 18px;
+  margin: 10px;
+  cursor: pointer;
+}
+img{
+  width: 100%;
+}
+header .social{
+  width: 100%;
+  margin: auto;
+  height: 40px;
+  background-color: blue;
+}
+ header .social ul{
+   display: flex;
+ }
+
+ header .social ul li{
+   width: 30px;
+   margin: 10px;
+ }
+ header .social ul li img{
+  width: 30px;
+}
+.container{
+  width: 85%;
+  height: 100%;
+  background: white;
+  margin: auto;
+}
+.home{
+  background-image: url('../images/back.jpg');
+  height: 50vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin: auto;
+}
+.home div{
+  width: 60%;
+  text-align: center;
+  margin: auto;
+  color: white;
+  font-size: 22px;
+  background: rgba(0, 0, 0, 0.507);
+}
+
+
+.service{
+  width: 100%;
+  
+}
+.card{
+  width: 100%;
+  display: flex;
+}
+.card .item{
+  padding: 10px;
+  width: 100%;
+  background: white;
+  margin: 5px;
+  text-align: center;
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+}
+.item i{
+  font-size: 55px;
+  color: rgb(0, 79, 170);
+}
+.item p{
+  font-size: 18px;
+}
+
+
+.detail{
+  width: 100%;
+  margin-top: 40px;
+}
+
+.detail-item{
+  width: 100%;
+  display: flex;
+  margin-top: 40px;
+}
+.detail-item .detail-t{
+  width: 100%;
+  font-size: 22px;
+}
+.detail-item .detail-t img{
+  margin-top: 15px;
+}
+
+.detail-item .detail-t p{
+  margin: 30px;
+  padding: 3px;
+}
+
+.detail-item .detail-t h1{
+  margin: 5px;
+  font-size: 36px;
+  color: rgb(0, 79, 170);
+}
+
+.detail-item .detail-t h2{
+  margin: 5px;
+  font-size: 24px;
+  color: rgb(255, 81, 0);
+}
+.detail-item .detail-t button{
+  margin-left: 30px;
+  background: rgb(0, 99, 192);
+  color: white;
+  cursor: pointer;
+}
+.detail-item .detail-t button:hover{
+  background: white;
+  box-shadow: 0px 0px 2px 1px blue;
+  color: orangered;
+}
+
+
+#forum{
+  display: none;
+}
+#forum i{
+  cursor: pointer;
+  width: max-content;
+  border-radius: 50%;
+  background: black;
+  position: absolute;
+top: 7%;
+left: 45%;
+transform: translate(-50%, -50%); 
+}
+#forum i:hover{
+  background: white;
+  box-shadow: 0px 0px 5px 2px black;
+  color: orangered;
+}
+.forum .forum-infos h1{
+  color: black;
+  text-align: center;
+  margin: 1px;
+}
+.forum .forum-infos h2{
+color: orangered;
+text-align: center;
+margin: 1px;
+}
+.forum .forum-infos img{
+width: 100%;
+}
+.forum .forum-infos ul h3{
+color: black;
+margin: 1px;
+}
+.forum .forum-infos ul li{
+color: black;
+margin: 1px;
+}
+.forum{
+  display: flex;
+  width: 50%;
+  padding: 1px;
+background: white;
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%); 
+}
+.forum .forum-infos{
+margin: 3px;
+  width: 100%;
+  height: 100%;
+  border: 1px solid blue;
+}
+.forum .form{
+  margin: 3px;
+  width: 100%;
+  border: 1px solid blue;
+}
+
+.forum .field{
+  display: flex;
+  justify-content: center;
+}
+.forum .field input[type="text"], input[type="email"], input[type="number"]{
+   width: 90%;
+   padding: 10px;
+   border: 0px;
+   outline: none;
+}
+.forum .field input[type="number"]{
+width: 90%;
+padding: 10px;
+border: 0px;
+outline: none;
+}
+.forum p{
+   text-align: left;
+   border-bottom: 2px solid red;
+   width: 100%;
+   margin: 10px;
+   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+.forum label{
+   color: black;
+}
+.field .code{
+   width: 20%;
+}
+.forum .form #code{
+width: 80px;
+height: 40px;
+margin-top: 0px;
+margin-right: 0px;
+padding: 1px;
+border: 0px;
+outline: none;
+}
+
+
+    /* Share Buttons */
+
+    .share-btn-container {
+      background: rgba(255, 255, 255, 0.021);
+      display: flex;
+      flex-direction: column;
+      padding: 16px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+      position: fixed;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+    
+    .share-btn-container a i {
+      font-size: 32px;
+    }
+    
+    .share-btn-container a {
+      margin: 12px 0;
+      transition: 500ms;
+    }
+    
+    .share-btn-container a:hover {
+      transform: scale(1.2);
+    }
+    
+    .share-btn-container .fa-facebook {
+      color: #3b5998;
+    }
+    
+    .share-btn-container .fa-twitter {
+      color: #1da1f2;
+    }
+    
+    
+    .share-btn-container .fa-youtube {
+      color: red;
+    }
+  
+
+    .boutique{
+      position: relative;
+      background-image: url(../images/typing.jpg);
+      display: flex;
+      justify-content:  center ;
+      align-items: center;
+    }
+    .boutique-item{
+      background: white;
+      width: 67%;
+      margin: 50px;
+      padding: 30px;
+    }
+
+    .boutique-item h1{
+      font-size: 36px;
+      color: orangered;
+      text-align: center;
+      margin: 20px;
+    }
+    .boutique-item p{
+      font-size: 22px;
+    }
+
+      /*pied de mon site web*/
+   footer{
+    background: black;
+    height: 100%;
+}
+footer .colonne{
+    display: flex;
+    width: 80%;
+    color: white;
+    margin: 4px auto;
+}
+

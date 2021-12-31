@@ -1,0 +1,140 @@
+@media (max-width: 858px){
+    .container{
+      width: 100%;
+    }
+    .home div{
+        font-size: 4vw;
+        width: 100%;
+    }
+    .home h1{
+        font-size: 5vw;
+        margin: 10px;
+        font-family: impact;
+    }
+   }
+
+   @media (max-width: 850px){
+    .service{
+        width: 100%;
+        display: block;
+        overflow-x: scroll;
+    }
+    .service::-webkit-scrollbar{
+        display: none;
+    }
+      .card{
+        width: 100%;
+        flex-wrap: nowrap;
+      }
+      .card .item{
+        display: block;
+        min-width: 100%;
+        background: white;
+        margin: 5px;
+        text-align: center;
+        box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+        overflow: hidden;
+      }
+      .item p{
+          width: 100%;
+      }
+      .item i{
+          text-align: center;
+        font-size: 55px;
+        color: rgb(0, 79, 170);
+      }
+      
+   }
+
+   @media (max-width: 850px){
+    .detail{
+        width: 100%;
+        height: 100%;
+      }
+      
+      .detail-item{
+        width: 100%;
+        flex-wrap: wrap;
+      }
+      .detail-item .detail-t{
+          align-items: center;
+        width: 100%;
+        font-size: 22px;
+      }
+      .detail-item .detail-t img{
+        margin-top: 15px;
+      }
+      .detail-item .detail-t p{
+        margin: 5px;
+        font-size: 5vw;
+        text-align: justify;
+      }
+      .detail-item button{
+          width: 90%;
+          margin-right: 1px;
+
+      }
+      
+      
+      .detail-item .detail-t h1{
+        margin: 5px;
+        font-size: 7vw;
+        color: rgb(0, 79, 170);
+        text-align: center;
+      }
+      
+      .detail-item .detail-t h2{
+        text-align: center;
+        margin-top: 15px;
+        font-size: 5vw;
+        color: rgb(255, 81, 0);
+      }
+   }
+
+
+   @media (max-width:850px){
+    .forum{
+        flex-wrap: wrap;
+        width: 95%;
+      }
+      #forum i{
+        cursor: pointer;
+        width: max-content;
+        border-radius: 50%;
+        background: black;
+        position: absolute;
+        top: 6%;
+        left: 95%;
+        transform: translate(-50%, -50%); 
+        }
+   }
+
+   @media (max-width: 850px){
+    .boutique{
+        background-image: url(../images/typing.jpg);
+        flex-wrap: wrap;
+        justify-content:  center ;
+        align-items: center;
+        height: 100%;
+        border: orangered 2px solid;
+      }
+      .boutique-item{
+        background: white;
+        width: 100%;
+        margin: 1px;
+        padding: 3px;
+      }
+  
+      .boutique-item h1{
+        font-size: 6vw;
+        color: orangered;
+        text-align: center;
+        margin: 20px;
+      }
+      .boutique-item p{
+        font-size: 4vw;
+        text-align: center;
+      }
+  
+   }
+  

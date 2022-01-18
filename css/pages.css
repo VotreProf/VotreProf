@@ -1,0 +1,366 @@
+body{
+  background: rgb(0, 105, 204);
+  box-sizing: border-box;
+  padding: 0px;
+  margin: 0px;
+}
+
+.container{
+  background: #FFF;
+  width: 80%;
+  margin:1px auto;
+  box-shadow: -0px 1px 6px 2px rgba(0,0,0,0.75);
+-webkit-box-shadow: 0px 1px 6px 2px rgba(0,0,0,0.75);
+-moz-box-shadow: 0px 1px 6px 2px rgba(0,0,0,0.75);
+}
+
+header{
+  background-image: url('/images/banner.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 200px;
+  width: 100%;
+}
+.coutenue{
+  width: 100%;
+  display: flex;
+}
+
+main{
+  width: 100%;
+  border: 1px solid blue;
+  margin-right: 3px;
+  margin-left: 3px;
+}
+
+
+.produit-detail{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.produit-detail div{
+  width: 100%;
+}
+.produit-image{
+  padding: 0px 20px 0px 20px;
+  height: 350px;
+}
+.produit-image img{
+  width: 100%;
+  height: 100%;
+}
+.produit-detail .produit-image{
+  box-shadow: 0px 0px 1px 3px;
+  padding: 0px 20px 0px 20px;
+}
+
+.produit-detail p{
+  font-size: 18px;
+  padding: 5px 20px 5px 20px;
+}
+
+
+
+.produit-detail button{
+  background: blue;
+  color: white;
+  font-size: 18px;
+  padding: 5px 10px 5px 10px;
+  margin: 10px;
+  border: none;
+  cursor: pointer;
+}
+
+.produit-detail button:hover{
+  background: orangered;
+}
+
+
+
+
+aside{
+  width: 25%;
+  height: 360px;
+  border: 1px solid blue;
+  margin-right: 3px;
+  margin-left: 3px;
+}
+
+footer{
+  width: 100%;
+  height: 100px;
+  background: black;
+  margin: auto;
+}
+
+form .title{
+  background-color: orangered;
+  padding: 10px;
+}
+label{
+  display: block;
+}
+#form-dataapp{
+background: white;
+display: none;
+width: 300px;
+  position: fixed;
+  position: fixed;
+  top: 30%;
+  right: 50%;
+}
+
+form input[type=text], input[type=email]{
+  width: 95%;
+  border: none;
+  padding: 10px;
+  outline: none;
+}
+form h1{
+  font-size: 18px;
+  text-align: center;
+  color: #FFF;
+}
+form button{
+background-color: lime;
+color: white;
+padding: 12px 17px;
+border: none;
+cursor: pointer;
+width: 100%;
+margin-bottom:10px;
+opacity: 0.8;
+}
+
+.close-form{
+  display: flex;
+  justify-items: center;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+background-color: rgb(255, 255, 255);
+color: red;
+padding: 10px;
+border: none;
+border-radius: 54px;
+cursor: pointer;
+width: 30px;
+height: 30px;
+margin-bottom:10px;
+opacity: 1;
+box-shadow: 0px 0px 3px 1px black;
+position: absolute;
+top: 5%;
+left: 5%;
+}
+form .close-form:hover{
+  background: orangered;
+  color: white;
+}
+form .groupe{
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  border-bottom: 1px solid lime;
+  margin: 5px;
+  padding:13px auto;
+}
+
+
+
+.whatsapp{
+  width: 250px;
+  box-shadow: 0px 0px 2px 1px black;
+  background: white;
+  position: fixed;
+  bottom: 0;
+  right: 10px;
+  z-index: 9;
+  padding: 10px;
+}
+
+.whatsapp .h1{
+  box-shadow: 0px 0px 2px 1px black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: green;
+  color: white;
+  height: 60px;
+}
+
+.whatsapp input[type=text], .form-container input[type=password] {
+  width: 100%;
+  box-shadow: 0px 0px 2px 1px black;
+  padding: 5px;
+  margin: 2px 0 5px 0;
+  border: none;
+  background: #FFF;
+  border-bottom: 1px solid blue;
+}
+
+.whatsapp textarea{
+  resize: none;
+  box-shadow: 0px 0px 2px 1px black;
+  width: 100%;
+  height: 100px;
+  padding: 5px;
+  margin: 2px 0 5px 0;
+  border: none;
+  background: #FFF;
+  border-bottom: 1px solid blue;
+}
+
+/* When the inputs get focus, do something */
+.whatsapp input[type=text]:focus, .form-container input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Set a style for the submit/login button */
+.whatsapp button {
+  background-color: #04AA6D;
+  color: white;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom:10px;
+  opacity: 0.8;
+}
+/* Button used to open the contact form - fixed at the bottom of the page */
+#open-button {
+  width: 50px;
+  height: 50px;
+  background-color: #555;
+  color: white;
+  border: none;
+  cursor: pointer;
+  opacity: 0.8;
+  position: fixed;
+  bottom: 23px;
+  right: 28px;
+  display: none;
+}
+#open-button img{
+  width: 50px;
+  height: 50px;
+}
+#closeForm{
+  width: 25px;
+  height: 25px;
+  background: white;
+  color: red;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  box-shadow: 0px 0px 2px 1px black;
+}
+
+
+@media (max-width: 858px){
+  .container, main, footer{
+    width: 100%;
+  }
+  .coutenue{
+    flex-wrap: wrap;
+  }
+  img{
+    width: 100%;
+  }
+
+  .produit-detail{
+    flex-wrap: wrap;
+  }
+
+  aside{
+    display: none;
+  }
+
+  form{
+    width: 90%;
+    border: 1px solid orangered;
+    padding: 10px;
+    margin: 10px auto;
+
+}
+form .title{
+    background-color: orangered;
+    padding: 10px;
+}
+label{
+    display: block;
+}
+#form-dataapp{
+background: white;
+  display: none;
+  width: 100%;
+    position: fixed;
+    top: 30%;
+    right: 0%;
+}
+
+form input[type=text], input[type=email]{
+    width: 95%;
+    border: none;
+    padding: 10px;
+    outline: none;
+}
+form h1{
+    font-size: 5vw;
+    text-align: center;
+    color: #FFF;
+}
+form button{
+  background-color: lime;
+  color: white;
+  padding: 12px 17px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom:10px;
+  opacity: 0.8;
+}
+
+.close-form{
+    display: flex;
+    justify-items: center;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  background-color: rgb(255, 255, 255);
+  color: red;
+  padding: 10px;
+  border: none;
+  border-radius: 54px;
+  cursor: pointer;
+  width: 30px;
+  height: 30px;
+  margin-bottom:10px;
+  opacity: 1;
+  box-shadow: 0px 0px 3px 1px black;
+  position: absolute;
+  top: 5%;
+  left: 5%;
+}
+form .close-form:hover{
+    background: orangered;
+    color: white;
+}
+form .groupe{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    border-bottom: 1px solid lime;
+    margin: 5px;
+    padding:13px auto;
+}
+
+}
+
+
+
+
+

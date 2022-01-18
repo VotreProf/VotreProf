@@ -1,0 +1,251 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;800&display=swap');
+
+:root{
+  --black:#192a56;
+  --orange:#F95F1D;
+  --yellow:#ffa801;
+}
+
+*{
+  margin:0; padding:0;
+  box-sizing: border-box;
+  text-decoration: none;
+  outline: none; border:none;
+  transition: .2s linear;
+}
+body{
+  background: var(--black);
+}
+
+html{
+  overflow-x: hidden;
+}
+p{
+  font-size: 16px;
+}
+img{
+  width: 100%;
+}
+
+.container{
+  width: #FFF;
+  width: 90%;
+  margin: 0px auto;
+}
+
+header{
+  background-image: url('/images/back.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 50vh;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header .header-desc{
+  width: 700px;
+  background: rgba(0, 0, 0, 0.473);
+  margin: 40px;
+  padding: 20px;
+}
+header .header-desc h1{
+  margin-bottom: 10px;
+  font-size: 36px;
+  text-align: center;
+}
+header .header-desc p{
+  padding: 0px 30px 0px 30px;
+  font-size: 20px;
+  text-align: center;
+}
+header .header-btn{
+  width: max-content;
+  margin:25px auto;
+}
+header .button{
+  padding: 10px;
+  margin: 10px;
+  background-color: blue;
+  color: white;
+  font-size: 18px;
+}
+
+
+
+
+section{
+  padding:0 7%;
+  padding-top: 7.5rem;
+  padding-bottom: 3rem;
+  min-height: auto;
+}
+
+
+.card1{
+  background:linear-gradient(45deg, blueviolet, lightgreen);
+  padding:15px 9%;
+  padding-bottom: 10px;
+}
+
+.card1 .heading{
+  text-align: center;
+  padding-bottom: 15px;
+  color:#fff;
+  text-shadow: 0 5px 10px rgba(0,0,0,.2);
+  font-size: 50px;
+}
+.box i{
+  font-size: 106px;
+}
+
+.card1 .box-container{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+  gap:15px;
+}
+
+.card1 .box-container .box{
+  box-shadow: 0 5px 10px rgba(0,0,0,.2);
+  border-radius: 5px;
+  background: #fff;
+  text-align: center;
+  padding:30px 20px;
+}
+
+.card1 .box-container .box img{
+  height: 80px;
+}
+
+.card1 .box-container .box h3{
+  color:rgb(0, 102, 255);
+  font-size: 22px;
+  padding:10px 0;
+}
+
+.card1 .box-container .box p{
+  color:black;
+  font-size: 16px;
+  line-height: 1;
+}
+
+.card1 .box-container .box .btn{
+  margin-top: 10px;
+  display: inline-block;
+  background:#333;
+  color:#fff;
+  font-size: 17px;
+  border-radius: 5px;
+  padding: 8px 25px;
+}
+
+.card1 .box-container .box .btn:hover{
+  letter-spacing: 1px;
+}
+
+.card1 .box-container .box:hover{
+  box-shadow: 0 10px 15px rgba(0,0,0,.3);
+  transform: scale(1.03);
+}
+
+
+
+@media (max-width:768px){
+  .card1{
+      padding:20px;
+  }
+}
+
+
+.whatsapp{
+  width: 250px;
+  box-shadow: 0px 0px 2px 1px black;
+  background: white;
+  position: fixed;
+  bottom: 0;
+  right: 10px;
+  z-index: 9;
+  padding: 10px;
+}
+
+.whatsapp .h1{
+  box-shadow: 0px 0px 2px 1px black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: green;
+  color: white;
+  height: 60px;
+}
+
+.whatsapp input[type=text], .form-container input[type=password] {
+  width: 100%;
+  box-shadow: 0px 0px 2px 1px black;
+  padding: 5px;
+  margin: 2px 0 5px 0;
+  border: none;
+  background: #FFF;
+  border-bottom: 1px solid blue;
+}
+
+.whatsapp textarea{
+  resize: none;
+  box-shadow: 0px 0px 2px 1px black;
+  width: 100%;
+  height: 100px;
+  padding: 5px;
+  margin: 2px 0 5px 0;
+  border: none;
+  background: #FFF;
+  border-bottom: 1px solid blue;
+}
+
+/* When the inputs get focus, do something */
+.whatsapp input[type=text]:focus, .form-container input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Set a style for the submit/login button */
+.whatsapp button {
+  background-color: #04AA6D;
+  color: white;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom:10px;
+  opacity: 0.8;
+}
+/* Button used to open the contact form - fixed at the bottom of the page */
+#open-button {
+  width: 50px;
+  height: 50px;
+  background-color: #555;
+  color: white;
+  border: none;
+  cursor: pointer;
+  opacity: 0.8;
+  position: fixed;
+  bottom: 23px;
+  right: 28px;
+  display: none;
+}
+#open-button img{
+  width: 50px;
+  height: 50px;
+}
+#closeForm{
+  width: 25px;
+  height: 25px;
+  background: white;
+  color: red;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  box-shadow: 0px 0px 2px 1px black;
+}
+
+

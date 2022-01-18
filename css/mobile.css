@@ -1,0 +1,52 @@
+@media (max-width: 858px){
+    .container{
+        width: 100%;
+    }
+
+    header{
+        width: 100%;
+        height: 95vh;
+        padding: 1px;
+        margin: 0px;
+    }
+
+    header .header-desc{
+        padding: 0px;
+        margin: 0px;
+        width: 100%;
+    }
+
+
+
+
+    .app{
+        width: 100%;
+    }
+    .app .item img{
+        width: 100%;
+    }
+
+    .app .item img{
+        display: block;
+        overflow: hidden;
+        overflow-x: auto;
+        width: 90%;
+    }
+
+    .app .item{
+        width: 98%;
+        margin: 1px;
+        padding: 2px;
+    }
+    .app .item h3{
+        font-size: 5vw;
+        text-align: center;
+    }
+
+    .app .item p{
+        width: 100%;
+        margin: 2px;
+        padding: 0px;
+        margin-bottom: 10px;
+    }
+}

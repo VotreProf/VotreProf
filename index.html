@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Si-Tech</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/menu.css">
+    <link rel="stylesheet" href="/css/mobile.css">
+</head>
+    <body>
+        <div class="container">
+            <!--menu de mon site web-->
+        <nav>
+            <input type="checkbox" id="check">
+            <label for="check" class="checkbtn">
+              <i class="fas fa-bars"></i>
+            </label>
+            <label class="logo"><img src="icons/logo.jpg" alt="SITECH"></label>
+            <ul>
+              <li><a class="active" href="#">Accueil</a></li>
+              <li><a href="https://votreprof.blogspot.com/p/comment-creer-un-blog-rm-000.html">Ma Boutique</a></li>
+              <li><a href="#">Contact</a></li>
+            </ul>
+          </nav>
+            <!--En tete de mon site-->
+            <header>
+                <div class="header-desc">
+                    <h1>Service d’informatique sur la technologie</h1>
+                    <p>
+                        Nous vous offrons un service informatique de très 
+                        bonne qualité et à votre souhait, si vous avez 
+                        rencontré un problème dans ordinateur, il suffit 
+                        de nous contacter pour un diagnostic gratuit
+                    </p><br><br>
+                    <p>
+                        Si vous etes debutant en informatique, je vous propose de telecharger 
+                        notre application pour avoir des document informatique gratuite.
+                    </p>
+
+                    <div class="header-btn">
+                        <a href="pages/application.html" class="button">Telecharger notre application ici</a>
+                    </div>
+
+                </div>
+            </header>
+            <section class="card1">
+                <div class="box-container">
+                    <div class="box">
+                        <span><i class="material-icons" style="color: blue;">computer</i></span>
+                        <h3>Réparation d'ordinateur</h3>
+                        <p>
+                            La solution de maintenance informatique fiable, 
+                            proactive et simple qui vous permet de vous recentrer sur votre métier.
+                        </p>
+                        <a href="#" class="btn">read more</a>
+                    </div>
+            
+                    <div class="box">
+                        <span><i class="material-icons" style="color: yellow;">folder</i></span>
+                        <h3>Récuperation donnée</h3>
+                        <p>
+                            Ne vous en faites pas si vous avez effacés par accident vos fichiers 
+                            on est la aussi pour vous aidez et tous récuperer.
+                        </p>
+                        <a href="#" class="btn">read more</a>
+                    </div>
+            
+                    <div class="box">
+                        <span><i class="material-icons" style="color: orangered;">business</i></span>
+                        <h3>Booster votre entreprise</h3>
+                        <p>
+                            Mettre votre buseniss en ligne avec un site web statique, 
+                            Nous realison aussi des flyers , logo, video publicitaire. 
+                        </p>
+                        <a href="#" class="btn">read more</a>
+                    </div>
+            
+                    <div class="box">
+                        
+                        <span><i class="material-icons" style="color: red;">dvr</i></span>
+                        <h3>Service pourformation</h3>
+                        <p>
+                            Pour recevoir des inscriptions en ligne vous avez besoin 
+                            un formulaire et une base de donnée facile pour voir vos participants.
+                        </p>
+                        <a href="#" class="btn">read more</a>
+                    </div>
+                </div>
+            </section>
+
+            <div class="whatsapp" id="myForm">
+                <div class="h1">
+                    <h1>Envoyer un message</h1>
+                    <span id="closeForm" onclick="closeForm()"><i class="material-icons">close</i></span>
+                </div>
+                <input type="text" id="name" placeholder="Entrer votre nom"><br>
+                <textarea id="message" placeholder="Enter your message"></textarea><br>
+                <button onclick="sendWa()">Envoyer un message</button>
+            </div>
+            <img src="images/whatsapp.jpg" alt="" id="open-button" onclick="openForm()">
+        </div>
+        <script src="js/whatsapp.js"></script>
+    </body>
+</html>

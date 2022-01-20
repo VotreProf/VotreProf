@@ -1,52 +1,48 @@
-@media (max-width: 858px){
+@media only screen and (max-width: 600px){
     .container{
         width: 100%;
+
     }
 
     header{
-        width: 100%;
-        height: 95vh;
-        padding: 1px;
-        margin: 0px;
+        height: 89vh;
+        background-image: url('/images/back.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
     }
 
-    header .header-desc{
-        padding: 0px;
-        margin: 0px;
-        width: 100%;
+        .rezo{
+            width: 100%;
+        }
+
+    .menu{
+        margin-top: 29px;
     }
 
-
-
-
-    .app{
-        width: 100%;
+    .sub-header{
+        flex-wrap: wrap;
     }
-    .app .item img{
-        width: 100%;
-    }
-
-    .app .item img{
+    #m{
         display: block;
-        overflow: hidden;
-        overflow-x: auto;
-        width: 90%;
+        font-size: 18px;
+    }
+    #o{
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 600px){
+    .homeText{
+        background-image: url('/images/home.jpeg');
+        background-size: cover;
+        margin: -20px 0px 0px 0px;
+    }
+    .home-img{
+        display: none;
     }
 
-    .app .item{
-        width: 98%;
-        margin: 1px;
-        padding: 2px;
-    }
-    .app .item h3{
-        font-size: 5vw;
-        text-align: center;
-    }
 
-    .app .item p{
-        width: 100%;
-        margin: 2px;
-        padding: 0px;
-        margin-bottom: 10px;
+    footer{
+        flex-wrap: wrap;
     }
 }

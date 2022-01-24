@@ -9,7 +9,7 @@ function myFunction() {
   }
 
   function downloadApp(){
-    window.location = 'https://drive.google.com/uc?export=download&id=1H-GJUY6_ZpNaCvhlvKPMvE7w1cWppH9K'
+    window.location = 'Application/Si-Tech_1_4.0.apk'
   }
 
 
